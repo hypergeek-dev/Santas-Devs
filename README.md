@@ -5,16 +5,45 @@ Brief description of your project, what it does, and what unique problem it solv
 
 ## Table of Contents
 
+- [ABOUT SUBMISSION](#about-submission)
+  - [Intro](#intro)
+  - [Goal](#goal)
+  - [Criteria](#criteria)
 - [Features](#features)
 - [User Stories](#user-stories)
 - [Installation](#installation)
 - [Development](#development)
 - [Testing](#testing)
+- [Deployment](#deployment)
+- [Criteria](#criteria)
 - [Accreditations](#accreditations)
-- [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
+
+The project is deployed and can be accessed at [http://your-deployed-link.com](Live link).
+
+
+# ABOUT SUBMISSION
+## Intro
+One or two paragraphs providing an overview of our project
+
+## Goal
+The goal section provides a concise summary of the main objective or purpose of the project or software described in this README. It addresses the following aspects:
+
+- ➡️ Problem Statement
+- ➡️ Objective(s)
+- ➡️ Target Audience
+- ➡️ Benefits
+
+## Criteria
+In this section, we will briefly discuss how our team addressed the applicable criteria:
+
+-  Creative design that enhances user-experience
+-  The project goes beyond the requirements of the assigned task
+-  Responsive and accessible for different screen sizes
+-  Project is well planned using Github Projects
+-  Project is 100% Front-end
 ## Features
 
 List the features of your project. For example:
@@ -43,22 +72,11 @@ Outline the testing strategies, frameworks used, and how to run tests for your p
 
 Mention any accreditations, certifications, or recognition that this project or team has received.
 
-## Contributing
-
-If your project is open for contributions, provide guidelines on how others can contribute. Include:
-...
 
 ## License
 
-Distribute your project under a license. For example:
 ```
 Distributed under the MIT License. See `LICENSE` for more information.
 ```
 
-## Acknowledgements
 
-List resources you find helpful and would like to give credit to. For example:
-...
-```
-
-This updated Table of Contents accurately reflects the structure of your `README.md` file. Each link in the Table of Contents should correspond to a section in the document, allowing for easy navigation.
