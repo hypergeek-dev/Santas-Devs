@@ -1,7 +1,13 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 10em);
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Lucida Handwriting', cursive;
+    /* font-family: 'Lucida Handwriting', cursive; */
     font-weight: bolder;
-    background-color: green;
+    /* background-color: green; */
 } 
 
 /* Festive background colors for Christmas */
@@ -31,4 +37,45 @@ body {
   /* Styles for the Music Player */
   .music-player {
     margin-top: 20px; /* Space between countdown and player */
+  }
+
+
+  /* ------------------------- COUNTDOWN */
+  .countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 50vw;
+    min-height: 200px;
+    margin: auto;
+
+    position: relative;
+  }
+
+  .countdown-container::after {
+    content: "";
+    background: url("../graphics/moon-santa.png") no-repeat top center;
+    background-size: cover;
+    opacity: 0.8;
+    inset: 0;
+    position: absolute;
+    z-index: -1; 
+  }
+
+  .countdown-item {
+    margin-inline: 1em;
+    color: #eee6e6;
+    background-color: rgb(192, 28, 28);
+    border-radius: 12px;
+    padding-inline: 1em;
+  }
+
+  .count-time {
+    font-size: 2em;
+    font-weight: bold;
   }
