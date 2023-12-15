@@ -66,3 +66,14 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link.active {
   color: #FFD700;
 }
+
+/* Style for the song currently being played */
+.playing {
+  color: #FFD700; /* Gold to highlight the current song */
+  font-weight: bold;
+}
+
+/* Style to change the cursor over the playlist items */
+#playlist li {
+  cursor: pointer;
+}

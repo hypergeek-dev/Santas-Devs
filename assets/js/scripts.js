@@ -93,5 +93,28 @@ playlist.addEventListener('click', function(e) {
   }
 });
 
+// Function to highlight the currently playing song
+function highlightPlayingSong() {
+  // Remove 'playing' class from all playlist items
+  document.querySelectorAll('#playlist li').forEach(function(item) {
+    item.classList.remove('playing');
+  });
+  
+  // Add 'playing' class to the playlist item corresponding to the current song
+  var playingListItem = document.querySelector('#playlist li[data-index="' + currentSong + '"]');
+  if (playingListItem) {
+    playingListItem.classList.add('playing');
+  }
+}
+
+// Modify playSong function to call highlightPlayingSong
+function playSong(index) {
+  currentSong = index;
+  audioSource.src = `assets/music/${songs[currentSong]}`;
+  audioPlayer.load();
+  audioPlayer.play();
+  highlightPlayingSong(); // Call this function whenever a song starts playing
+}
+
 // Initialize playlist
 loadPlaylist();
