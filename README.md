@@ -21,7 +21,7 @@ Brief description of your project, what it does, and what unique problem it solv
 - [Acknowledgements](#acknowledgements)
 
 
-The project is deployed and can be accessed at [http://your-deployed-link.com](Live link).
+The project is deployed and can be accessed at [[http://your-deployed-link.com](https://hypergeek-dev.github.io/Santas-Devs/)](Live link).
 
 
 # ABOUT SUBMISSION
