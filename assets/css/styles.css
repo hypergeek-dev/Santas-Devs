@@ -76,4 +76,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Style to change the cursor over the playlist items */
 #playlist li {
   cursor: pointer;
+  padding-left: 5px; 
+  margin-bottom: 5px; 
+}
+
+#playlist {
+  padding-left: 20px; 
+  list-style-position: inside; 
 }
