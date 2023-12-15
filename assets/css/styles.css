@@ -1,8 +1,15 @@
 body {
-    font-family: 'Lucida Handwriting', cursive;
+    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-    background-color: green;
-} 
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: bold;
+  color: #FFD700;
+  text-align: center;
+}
 
 /* Festive background colors for Christmas */
 .bg-christmas {
