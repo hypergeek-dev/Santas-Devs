@@ -47,33 +47,39 @@
       </nav>
       
     </header>
-    <div class="text-center">
-      <h1>Workspace 4</h1>
-    </div>
-    <div class="container h-100">
+    <div class="container h-100 main-container">
+      <!-- Title -->
+      <div class="text-center">
+        <h1>Workspace 4</h1>
+      </div>
+    
       <!-- Countdown Section -->
       <div class="text-center my-5">
         <!-- Countdown Box -->
         <div id="countdown" class="countdown-box">
           <!-- Countdown Time Placeholders -->
-          <span id="days">00</span> Days, <span id="hours">00</span>h:<span id="minutes">00</span>m:<span id="seconds">00</span>
+          <span id="days">00</span> Days, <span id="hours">00</span>h: <span id="minutes">00</span>m: <span id="seconds">00</span>s
         </div>
       </div>
-
+    
       <!-- Music Player Section -->
       <div class="music-player text-center">
+        <!-- Audio Player -->
         <audio id="audioPlayer" controls>
           <source id="audioSource" src="assets/music/song1.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
+        <!-- Player Controls -->
         <div id="playerControls">
           <button id="prevButton">Prev</button>
           <button id="nextButton">Next</button>
         </div>
+        <!-- Playlist -->
         <ol id="playlist">
           <!-- Playlist Items will be loaded here by JavaScript -->
         </ol>
       </div>
+    </div>
 
 
     </div>

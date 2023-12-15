@@ -1,41 +1,68 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  background-color: #fff;
+  color: #000; /* Black text color for body */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Great Vibes', cursive;
   font-weight: bold;
   color: #FFD700;
-  text-align: center;
 }
 
-/* Festive background colors for Christmas */
-.bg-christmas {
-    background-color: #d32f2f; /* Christmas red */
-    color: #fff; /* White text color */
-    display: flex; /* Align children inline */
-    justify-content: center; /* Center children horizontally */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
-  }
-  
-  /* Styles for each time section */
-  .time-section {
-    display: inline-block;
-    margin: 0 5px; /* Space between sections */
-    text-align: center; /* Center the text */
-  }
-  
-  /* Styles for labels below the numbers */
-  .label {
-    font-size: 0.75rem; /* Size of the label text */
-    text-transform: uppercase; /* Uppercase labels for a cleaner look */
-  }
-  
-  /* Styles for the Music Player */
-  .music-player {
-    margin-top: 20px; /* Space between countdown and player */
-  }
+/* Styles for next and previous buttons */
+#prevButton, #nextButton {
+  background-color: #014421; /* Forest Green background */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for size */
+  font-size: 1rem;
+  margin: 5px; /* Space between buttons */
+  cursor: pointer; /* Cursor to pointer on hover */
+}
+
+/* Hover effect for buttons */
+#prevButton:hover, #nextButton:hover {
+  background-color: #013220; /* Slightly darker green on hover */
+}
+
+/* Container for title, countdown, and music player */
+.main-container {
+  background-color: #fff; /* White background */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  padding: 20px;
+  margin-top: 20px; /* Space from the header */
+}
+
+/* Styles for the Countdown Section */
+.countdown-box {
+  background-color: #D32F2F; /* Rich Red background */
+  color: #fff; /* White text color */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 20px; /* Space below countdown */
+}
+
+/* Styles for the Music Player */
+.music-player {
+  margin-top: 20px; /* Space below countdown */
+}
+
+/* Style for navbar brand to match the theme */
+.navbar-brand {
+  color: #014421;
+}
+
+/* Style for navigation links */
+.nav-link {
+  color: #014421;
+}
+
+/* Style for active navigation link */
+.nav-link.active {
+  color: #FFD700;
+}
