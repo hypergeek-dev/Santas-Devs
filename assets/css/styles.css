@@ -1,34 +1,101 @@
 body {
-    font-family: 'Lucida Handwriting', cursive;
-    font-weight: bolder;
-    background-color: green;
-} 
+  font-family: 'Lucida Handwriting', cursive;
+  font-weight: bolder;
+  background-color: green;
+}
 
 /* Festive background colors for Christmas */
 .bg-christmas {
-    background-color: #d32f2f; /* Christmas red */
-    color: #fff; /* White text color */
-    display: flex; /* Align children inline */
-    justify-content: center; /* Center children horizontally */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  background-color: #d32f2f;
+  /* Christmas red */
+  color: #fff;
+  /* White text color */
+  display: flex;
+  /* Align children inline */
+  justify-content: center;
+  /* Center children horizontally */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* subtle shadow */
+}
+
+/* Styles for each time section */
+.time-section {
+  display: inline-block;
+  margin: 0 5px;
+  /* Space between sections */
+  text-align: center;
+  /* Center the text */
+}
+
+/* Styles for labels below the numbers */
+.label {
+  font-size: 0.75rem;
+  /* Size of the label text */
+  text-transform: uppercase;
+  /* Uppercase labels for a cleaner look */
+}
+
+/* Styles for the Music Player */
+.music-player {
+  margin-top: 20px;
+  /* Space between countdown and player */
+}
+
+/* Style for the card generator canvas */
+.card-canvas {
+  border: 2px solid #777777;
+}
+
+
+/* _____________________________________________________ */
+
+/* MEDIA QUERIES FOR CARD GENERATOR*/
+
+/* _____________________________________________________ */
+
+@media (max-width: 425px) {
+  #card-canvas {
+    width: 60%;
+    height: auto;
+    border: 2px solid #777777;
   }
-  
-  /* Styles for each time section */
-  .time-section {
-    display: inline-block;
-    margin: 0 5px; /* Space between sections */
-    text-align: center; /* Center the text */
+}
+
+/* _____________________________________________________ */
+
+/* tablet screens */
+
+@media (min-width: 426px) and (max-width: 768px) {
+  #card-canvas {
+    width: 60%;
+    height: 400px;
+    border: 2px solid #777777;
   }
-  
-  /* Styles for labels below the numbers */
-  .label {
-    font-size: 0.75rem; /* Size of the label text */
-    text-transform: uppercase; /* Uppercase labels for a cleaner look */
+}
+
+/* _____________________________________________________ */
+
+/* Laptop screens */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #card-canvas {
+    width: 50%;
+    height: 300px;
+    border: 2px solid #777777;
   }
-  
-  /* Styles for the Music Player */
-  .music-player {
-    margin-top: 20px; /* Space between countdown and player */
+}
+
+
+/* _____________________________________________________ */
+
+/* Large screens */
+
+@media (min-width: 1025px) {
+  #card-canvas {
+    width: 50%;
+    height: auto;
+    border: 2px solid #777777;
   }
+}
