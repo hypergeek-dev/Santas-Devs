@@ -15,84 +15,90 @@
     }
 
      /* ------------------------- FAQ */
-    .faq-container {
+    .faq-button {
       position: fixed; 
       bottom: 20px; 
       right: 20px; 
       cursor: pointer;
-      background-color: rgb(77, 194, 34);
+      /* background-color: #c50f0f; */
+      /* background-color: #262626; */
+      background-color: #0d430c;
       padding-inline: 1rem;
       padding-block: 0.5rem;
       border-radius: 12px;
-    }
-    .faq-container1 {
-      position: fixed; 
-      bottom: 20px; 
-      right: 100px; 
-      cursor: pointer;
-      /* background-color: rgb(77, 194, 34); */
-      padding-inline: 1rem;
-      padding-block: 0.5rem;
-      border-radius: 12px;
-    }
-    .faq-container2 {
-      position: fixed; 
-      bottom: 20px; 
-      right: 180px; 
-      cursor: pointer;
-      background-color: rgb(13, 221, 218);
-      padding-inline: 1rem;
-      padding-block: 0.5rem;
-      border-radius: 12px;
-    }
-    .faq-container3 {
-      position: fixed; 
-      bottom: 20px; 
-      right: 260px; 
-      cursor: pointer;
-      background-color: black;
-      padding-inline: 1rem;
-      padding-block: 0.5rem;
-      border-radius: 12px;
+      border: 1px solid #DAA520;
+      transition: transform 0.3s ease-in-out;
     }
 
-   /* ------------------------- COUNTDOWN */
+    .faq-button:hover {
+      transform: scale(1.1);
+    }
+
+    .modal-header {
+      font-size: 1.2rem;
+      color: #0d430c;
+      text-shadow: #DAA520;
+      font-weight: 700;
+    }
+
+    .modal-button {      
+      background-color: #0d430c;
+      border: 1px solid #DAA520;
+    }
+
+    .modal-button:hover {
+      background-color: #146713;
+    }
+ 
+    /* ------------------------- COUNTDOWN */
    .countdown-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: .4rem;
+    flex-wrap: wrap;
 
     padding: 1em;
-    border: 1px solid black;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 50vw;
+    /* border: 1px solid black; */
+    /* border-radius: 12px; */
+    /* overflow: hidden; */
+    max-width: 350px;
     min-height: 200px;
     margin: auto;
 
-    position: relative;
+    /* background-image: url("./assets/images/countdown-timer/paper.jpg"); */
+    background-image: url("./assets/images/countdown-timer/paper2.jpg");
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 10px 5px 5px #262626;
+
+    margin-top: 1rem;
+
+    /* position: relative; */
   }
 
-  .countdown-container::after {
+  /* .countdown-container::after {
     content: "";
-    background: url("./assets/images/moon-santa.png") no-repeat top center;
+    background: url("./assets/images/countdown-timer/moon-santa.png") no-repeat top center;
     background-size: cover;
     opacity: 0.8;
     inset: 0;
     position: absolute;
     z-index: -1; 
-  }
+  } */
 
   .countdown-item {
-    margin-inline: 1em;
+    /* margin-inline: .3em; */
     color: #eee6e6;
-    background-color: rgb(192, 28, 28);
-    border-radius: 12px;
+    background-color: #262626;
+    /* border-radius: 12px; */
     padding-inline: 1em;
+    /* width: 60px; */
+    flex: 1;
   }
 
   .count-time {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
   }
 
@@ -138,7 +144,6 @@
   </header>
 
   <div class="text-center">
-    <h1>Workspace 3</h1>
   </div>
   <div class="countdown-container">
     <div class="countdown-item" id="days">
@@ -162,32 +167,24 @@
     </div>
   </div>
 
-  <button type="button" class="faq-container" data-bs-toggle="modal" data-bs-target="#faqModal">
-    <img src="./assets/images/faq/faq.png" alt="question mark" width="30" height="50">
+  <button type="button" class="faq-button" data-bs-toggle="modal" data-bs-target="#faqModal">
+    <img src="./assets/images/faq/faq-gold.png" alt="question mark" width="25" height="40">
   </button>
-  <div class="faq-container1">
-    <img src="./assets/images/faq/faq-red.png" alt="question mark" width="50" height="50">
-  </div>
-  <div class="faq-container2">
-    <img src="./assets/images/faq/faq-moon.png" alt="question mark" width="30" height="50">
-  </div>
-  <div class="faq-container3">
-    <img src="./assets/images/faq/faq-gold.png" alt="question mark" width="30" height="50">
-  </div>
+
 
   <!-- Modal -->
   <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">FAQ</h5>
+          <h5 class="modal-title modal-header" id="exampleModalLabel">FAQ</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           Long text goes here
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary modal-button" data-bs-dismiss="modal">Close</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>
