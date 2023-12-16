@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interactive Christmas Card</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/cs/styles.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -112,38 +112,46 @@
     <div class="row text-center">
       <div class="col-sm-12">
 
+        <form id="cardForm">
         <!-- 1. Adding background -->
         <label for="background">Add your background</label>
         <br>
-        <select id="background" class="mb-3">
+        <select name="b" id="background" class="mb-3" required>
           <option value="">Select a background</option>
-          <option value="assets\images\image_1.jpg">Background 1</option>
-          <option value="assets\images\image_2.jpg">Background 2</option>
-          <option value="assets\images\image_3.jpg">Background 3</option>
-          <option value="assets\images\image_4.jpg">Background 4</option>
-          <option value="assets\images\image_5.jpg">Background 5</option>
-          <option value="assets\images\image_6.jpg">Background 6</option>
+          <option value="1">Background 1</option>
+          <option value="2">Background 2</option>
+          <option value="3">Background 3</option>
+          <option value="4">Background 4</option>
+          <option value="5">Background 5</option>
+          <option value="6">Background 6</option>
         </select>
         <br>
 
         <!-- 2. Adding recipient -->
         <label for="recipient">Add recipient</label>
         <br>
-        <input type="text" id="recipient" class="mb-3">
+        <input name="r" type="text" id="recipient" class="mb-3" required>
         <br>
 
         <!-- Adding greeting -->
         <label for="greeting">Add your greeting</label>
         <br>
-        <input type="text" id="greeting" class="mb-3">
+        <input name="g" type="text" id="greeting" class="mb-3" required>
         <br>
 
         <!-- Adding sender -->
         <label for="sender">Add senders name</label>
         <br>
-        <input type="text" id="sender" class="mb-3">
+        <input name="s" type="text" id="sender" class="mb-3" required>
         <br>
 
+        <!--Generates shareable link-->
+          <p><button type="submit">Create link</button></p>
+        </form>
+
+        <!--Link text is displayed in this box-->
+        <p>Copy this link to share your card:</p>
+        <p><input id="cardUrl" readonly type="text"></p>
 
         <!-- 3. Download the image link -->
         <div class="row text-center mb-3">
@@ -197,7 +205,7 @@
         context.clearRect(0, 0, cardCanvas.width, cardCanvas.height);
 
         // 2. Get the selected background URL from the dropdown
-        let backgroundUrl = backgroundSelect.value;
+        let backgroundUrl = `assets/images/image_${backgroundSelect.value}.jpg`;
 
         // 3. Load and draw the background image
         let backgroundImage = new Image();
@@ -230,6 +238,27 @@
         cardDownload.href = cardUrl;
       }
 
+      // Creating the shareable link
+      const cardForm = document.getElementById("cardForm");
+
+      cardForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        // base URL to display (rather than design) this card
+        // replace this URL with the location of the webpage displaying the graphic
+        // const cardUrl = new URL("snowman.html", window.location.href);
+        const cardUrl = new URL('view-card.html', window.location.href);
+        // turn the form fields into a query string
+        const values = new URLSearchParams(new FormData(cardForm));
+
+        // add the query string as the URL hash, so it can be retrieved by the 'receive message' page
+        // btoa() encodes the query string so that the user's data is not shown directly in the URL
+        cardUrl.hash = btoa(values.toString());
+
+        // display the URL in a read-only text field so the user can copy and share it
+        const urlField = document.getElementById("cardUrl");
+        urlField.value = cardUrl.toString();
+
+    });
     </script>
 
 
