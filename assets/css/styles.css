@@ -50,7 +50,7 @@ body {
 
 .overlay-container {
   position: relative;
-
+ 
   margin: auto;
 }
 
@@ -65,17 +65,23 @@ body {
 
 .background-div {
   background: url('assets/images/main_xmas_image/rear_image.png') no-repeat center center;
+  
   z-index: 1;
 }
-
+.middle-div-wrapper {
+  height: 80vh;
+}
 .middle-div {
-  z-index: 2;
+  z-index: 50;
+ 
 }
 
 .foreground-div {
   background: url('assets/images/main_xmas_image/front_image.png') no-repeat center center;
-  z-index: 3;
+  z-index: 99;
 }
+
+      
 /* _____________________________________________________ */
 
 /* MEDIA QUERIES FOR CARD GENERATOR*/
