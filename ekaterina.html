@@ -6,12 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interactive Christmas Card</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/cs/styles.css" rel="stylesheet">
+  <!-- <link href="assets/css/styles.css" rel="stylesheet"> -->
 
   <style>
     body {
       background: url("./assets/images/main_xmas_image/front_image.png") no-repeat center center fixed;
       background-size: cover;
+    }
+
+     /* ------------------------- FAQ */
+    .faq-container {
+      position: fixed; 
+      bottom: 20px; 
+      right: 20px; 
+      cursor: pointer;
+      background-color: rgb(77, 194, 34);
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      border-radius: 12px;
+    }
+    .faq-container1 {
+      position: fixed; 
+      bottom: 20px; 
+      right: 100px; 
+      cursor: pointer;
+      /* background-color: rgb(77, 194, 34); */
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      border-radius: 12px;
+    }
+    .faq-container2 {
+      position: fixed; 
+      bottom: 20px; 
+      right: 180px; 
+      cursor: pointer;
+      background-color: rgb(13, 221, 218);
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      border-radius: 12px;
+    }
+    .faq-container3 {
+      position: fixed; 
+      bottom: 20px; 
+      right: 260px; 
+      cursor: pointer;
+      background-color: black;
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      border-radius: 12px;
     }
 
    /* ------------------------- COUNTDOWN */
@@ -120,9 +162,41 @@
     </div>
   </div>
 
+  <button type="button" class="faq-container" data-bs-toggle="modal" data-bs-target="#faqModal">
+    <img src="./assets/images/faq/faq.png" alt="question mark" width="30" height="50">
+  </button>
+  <div class="faq-container1">
+    <img src="./assets/images/faq/faq-red.png" alt="question mark" width="50" height="50">
+  </div>
+  <div class="faq-container2">
+    <img src="./assets/images/faq/faq-moon.png" alt="question mark" width="30" height="50">
+  </div>
+  <div class="faq-container3">
+    <img src="./assets/images/faq/faq-gold.png" alt="question mark" width="30" height="50">
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">FAQ</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Long text goes here
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
   document.addEventListener("DOMContentLoaded", function () {
-  
+    
   // ------------------------------ COUNTDOWN 
 
   let christmasDate = new Date("December 25, " + new Date().getFullYear() + " 00:00:00").getTime();
@@ -159,8 +233,9 @@
 });
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
