@@ -268,8 +268,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
 }
 
-}
-
 /* -------------------------------- COUNTDOWN TIMER */
 .countdown-container { 
   display: flex;
@@ -344,9 +342,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-size: .9rem;
   padding-inline: 1em;
+}
+
+.faq-content {
+  background: linear-gradient(90deg, rgba(253, 244, 227, .65) 0%, #FDF4E3 50%, rgba(253, 244, 227, .65) 100%);
+  font-weight: bold;
+  font-size: .9rem;
+  padding-inline: 1em;
 
 }
 
+.faq-body {
+  border: 2px solid #A02C2C;
+  border-radius: .5rem;
+  box-shadow: 0px 1px 5px 1px #c65b5b;
+}
+/* -------------------------------- END HELP PAGE (FAQ) */
 .faq-body {
   border: 2px solid #A02C2C;
   border-radius: .5rem;
