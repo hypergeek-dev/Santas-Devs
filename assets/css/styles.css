@@ -61,32 +61,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
 }
 
-.background-div, .middle-div, .foreground-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.background-div {
-  background: url('assets/images/main_xmas_image/rear_image.png') no-repeat center center;
-  
-  z-index: 1;
-}
-.middle-div-wrapper {
-  height: 80vh;
-}
-.middle-div {
-  z-index: 50;
- 
-}
-
-.foreground-div {
-  background: url('assets/images/main_xmas_image/front_image.png') no-repeat center center;
-  z-index: 99;
-}
 
 /* Style for Music Player Footer */
 .footer {
