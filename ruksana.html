@@ -117,7 +117,6 @@
         <label for="background">Add your background</label>
         <br>
         <select name="b" id="background" class="mb-3" required>
-          <option value="">Select a background</option>
           <option value="1">Background 1</option>
           <option value="2">Background 2</option>
           <option value="3">Background 3</option>
@@ -165,7 +164,6 @@
     <footer class="mt-3">
 
     </footer>
-
 
 
     <!-- Bootstrap JS cdn -->
@@ -239,6 +237,21 @@
       }
 
 
+      const carousel = document.getElementById('carouselExampleIndicators')
+
+      // Updates the dropdown select field to match the carousel image
+      carousel.addEventListener('slide.bs.carousel', event => {
+        backgroundSelect.value = event.to + 1;
+        createCard();
+      })
+
+      // Updates the carousel image when the user selects a background image
+      // from the dropdown select field
+      backgroundSelect.addEventListener('change', event => {
+        bootstrap.Carousel.getOrCreateInstance(carousel).to(backgroundSelect.value - 1)
+      })
+
+
       // Creating the shareable link
       const cardForm = document.getElementById("cardForm");
 
@@ -258,6 +271,9 @@
         urlField.value = cardUrl.toString();
 
     });
+    // Renders the canvas on load so that it displays the first image (instead of being empty)
+    createCard();
+
     </script>
 
 

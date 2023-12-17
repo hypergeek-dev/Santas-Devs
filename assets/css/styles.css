@@ -1,7 +1,14 @@
 body {
-  font-family: 'Lucida Handwriting', cursive;
+  font-family: 'Roboto', sans-serif;
   font-weight: bolder;
- 
+  background-color: #fff;
+  color: #000; /* Black text color for body */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: bold;
+  color: #FFD700;
 }
 
 /* Festive background colors for Christmas */
@@ -80,6 +87,70 @@ body {
   background: url('assets/images/main_xmas_image/front_image.png') no-repeat center center;
   z-index: 99;
 }
+
+/* Style for Music Player Footer */
+.footer {
+  background-color: #014421; /* Forest green background */
+  padding: 10px;
+}
+
+/* Style for the hidden playlist modal */
+.playlist-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.playlist-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.close-modal {
+  float: right;
+  cursor: pointer;
+}
+
+/* Style for displaying the currently playing song's title */
+.current-song {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.form-range {
+  width: 100%; /* Full width for volume and progress bar */
+}
+
+/* Centering the player controls */
+.player-controls {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Style for rounded play/pause button */
+#play-pause.rounded-circle {
+  border-radius: 50%; 
+  padding: 0.5rem 0.8rem;
+}
+
+/* Style for the volume control and mute toggle */
+#volume-control {
+  display: inline-block; 
+  vertical-align: middle; 
+  width: auto; 
+  margin: 0 10px;
+}
+
 
       
 /* _____________________________________________________ */
