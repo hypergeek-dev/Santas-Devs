@@ -62,6 +62,18 @@ Instructions on how to install the project:
 
 Describe the development process and setup. Include information about tools, best practices, coding standards, etc.
 
+**Card Generator - Sharing the card using a link**
+
+When the user clicks the 'create link' button on the card generator form, a 
+link is created containing the encoded form field values which the user can 
+send to the recipient to share the card.  
+
+When the recipient follows the link, their card and personalised message are 
+displayed.
+
+A detailed description of how this functionality was implemented can be found 
+here: [https://github.com/hypergeek-dev/Santas-Devs/issues/17#issuecomment-1858987879](https://github.com/hypergeek-dev/Santas-Devs/issues/17#issuecomment-1858987879)
+
 ## Testing
 
 Outline the testing strategies, frameworks used, and how to run tests for your project.
