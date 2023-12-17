@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interactive Christmas Card</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Bootstrap icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
   <link href="assets/cs/styles.css" rel="stylesheet">
@@ -29,13 +28,8 @@
       z-index: -1; 
     }
 
-    .about-container {
-      /* background-image: url("assets/images/about-us/image.png");
-      background-repeat: no-repeat;
-      background-size: cover; */
-
-      padding: 15rem 5rem;
-
+    .about-container {    
+      padding: 12rem 5rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -44,7 +38,6 @@
 
       position: relative;
     }
-
 
     .team-member {
       flex: 1;
@@ -63,6 +56,7 @@
       flex-direction: column;
       align-items: center;
       background-color: #FDF4E3;
+      border-radius: .5rem;
     }
 
     figure i {
@@ -82,6 +76,23 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    .about-intro {
+      margin-top: 2em;
+      margin-inline: auto;
+      padding: 1em;
+      color: #FDF4E3;
+      text-shadow: 0px 0px 5px #b1d61d;
+      width: 70%;
+      background-color: rgba(11, 61, 46, .7);
+      border-radius: .5rem;
+    }
+
+    @media (max-width: 600px) {
+      .about-intro {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -124,9 +135,9 @@
     </nav>
   </header>
 
-  <div class="text-center text-white">
-    <h2>About Us</h2>
-    <p>About project bla bla bla...</p>
+  <div class="text-center text-white about-intro">
+    <h2>Santa's Devs team</h2>
+    <p>is sending you my heartfelt wishes for a magical Christmas and a New Year brimming with hope, prosperity, and the company of loved ones. Cheers to a wonderful holiday season!</p>
   </div>
 
   <div class="about-container">
@@ -172,8 +183,6 @@
     </figure>
 
   </div>
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>
