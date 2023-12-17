@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="assets/cs/styles.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -52,39 +52,19 @@
     <!-- Music Player Footer -->
     <footer class="footer bg-dark text-light fixed-bottom">
       <div class="container">
+        <!-- Player Controls with Font Awesome Icons -->
         <div class="row justify-content-between align-items-center">
-          <!-- Player Controls with Font Awesome Icons -->
           <div class="col player-controls text-center">
-            <!-- Previous song button -->
-            <button id="prev-song" class="btn btn-secondary">
-              <i class="fas fa-step-backward"></i>
-            </button>
-            <!-- Play/Pause button -->
-            <button id="play-pause" class="btn btn-secondary rounded-circle">
-              <i class="fas fa-play"></i>
-            </button>
-            <!-- Next song button -->
-            <button id="next-song" class="btn btn-secondary">
-              <i class="fas fa-step-forward"></i>
-            </button>
+            <button id="prev-song" class="btn btn-secondary"><i class="fas fa-step-backward"></i></button>
+            <button id="play-pause" class="btn btn-secondary rounded-circle"><i class="fas fa-play"></i></button>
+            <button id="next-song" class="btn btn-secondary"><i class="fas fa-step-forward"></i></button>
           </div>
-          <!-- Volume and Mute Toggle -->
           <div class="col-auto">
-            <!-- Volume Mute Toggle Button -->
-            <button id="volume-mute-toggle" class="btn btn-secondary">
-              <i class="fas fa-volume-up volume-icon"></i>
-            </button>
-            <!-- Volume Control Slider -->
+            <button id="volume-mute-toggle" class="btn btn-secondary"><i class="fas fa-volume-up volume-icon"></i></button>
             <input type="range" id="volume-control" class="form-range" min="0" max="100" value="100">
-          </div>
-          <!-- Playlist Toggle Button -->
-          <div class="col-auto">
-            <button id="playlist-toggle" class="btn btn-secondary">
-              <i class="fas fa-list"></i>
-            </button>
+            <button id="playlist-toggle" class="btn btn-secondary"><i class="fas fa-list"></i></button>
           </div>
         </div>
-        <!-- Current Song and Progress Bar -->
         <div class="row">
           <div class="col text-center">
             <div id="current-song" class="current-song">Current Music Playing</div>
@@ -99,9 +79,7 @@
       <div class="playlist-content">
         <span class="close-modal">&times;</span>
         <h2>Playlist</h2>
-        <ul id="playlist-list">
-          <!-- Playlist songs will be dynamically inserted here -->
-        </ul>
+        <ul id="playlist-list"></ul>
       </div>
     </div>
 

@@ -92,31 +92,31 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   background-color: #014421; /* Forest green background */
   padding: 10px;
+  color: #fff;
 }
 
-/* Style for the hidden playlist modal */
+/* Playlist modal at the bottom right */
 .playlist-modal {
   position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  bottom: 0;
+  right: 0;
+  width: 300px; /* Fixed width for the modal */
+  height: auto;
   z-index: 1000;
+  display: none; /* Initially hidden */
 }
+
 
 .playlist-content {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  width: 50%;
+  border-radius: 5px;
 }
 
+/* Ensure close button is visible */
 .close-modal {
-  float: right;
+  color: #000;
   cursor: pointer;
 }
 
@@ -130,28 +130,53 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%; /* Full width for volume and progress bar */
 }
 
-/* Centering the player controls */
-.player-controls {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 /* Style for rounded play/pause button */
 #play-pause.rounded-circle {
-  border-radius: 50%; 
+  border-radius: 50%;
   padding: 0.5rem 0.8rem;
 }
 
 /* Style for the volume control and mute toggle */
 #volume-control {
-  display: inline-block; 
-  vertical-align: middle; 
-  width: auto; 
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
   margin: 0 10px;
 }
 
+/* Ensure the volume icon is white for visibility */
+.volume-icon {
+  color: #fff; /* White color for the volume icon */
+}
 
+/* Style for list items in the playlist modal for better visibility */
+#playlist-list li {
+  color: #000; /* Black color for list items */
+  cursor: pointer; /* Indicate the items are clickable */
+  padding: 5px 0; /* Some padding for touch targets */
+}
+
+/* Style for green buttons with shadow */
+#prev-song, #play-pause, #next-song {
+  background-color: #014421; /* Forest green background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Centering the player controls */
+.player-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+}
+
+/* White color for volume and progress sliders */
+.form-range::-webkit-slider-thumb {
+  background-color: #fff;
+}
+
+.form-range::-moz-range-thumb {
+  background-color: #fff;
+}
       
 /* _____________________________________________________ */
 
