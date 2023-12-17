@@ -27,6 +27,93 @@ h1, h2, h3, h4, h5, h6 {
   /* subtle shadow */
 }
 
+/* -------------------------------- COUNTDOWN TIMER */
+.countdown-container { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+  flex-wrap: wrap;
+
+  padding: 1em;
+  max-width: 340px;
+  min-height: 302px;
+  margin: auto;
+
+  background: url("../images/countdown-timer/bg-timer.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  margin-top: 1rem;
+
+  
+}
+
+.countdown-item {
+  color: #FDF4E3;
+  padding-inline: 1em;
+  flex: 1;
+}
+
+.count-time {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-top: .5em;
+}
+/* -------------------------------- END COUNTDOWN TIMER */
+
+/* -------------------------------- HELP PAGE (FAQ) */
+.faq-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  background-color: #0B3D2E;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid #DAA520;
+  transition: transform 0.3s ease-in-out;
+
+  z-index: 99;
+}
+
+.faq-button:hover {
+  transform: scale(1.1);
+}
+
+.faq-title {
+  font-size: 1.2rem;
+  color: #0B3D2E;
+  font-weight: 700;
+}
+
+.faq-close-btn {
+  background-color: #A02C2C;
+  color: #FDF4E3;
+}
+
+.faq-close-btn:hover {
+  background-color: #a44646;
+}
+
+.faq-content {
+  background: linear-gradient(90deg, rgba(253, 244, 227, .65) 0%, #FDF4E3 50%, rgba(253, 244, 227, .65) 100%);
+  font-weight: bold;
+  font-size: .9rem;
+  padding-inline: 1em;
+
+}
+
+.faq-body {
+  border: 2px solid #A02C2C;
+  border-radius: .5rem;
+  box-shadow: 0px 1px 5px 1px #c65b5b;
+}
+/* -------------------------------- END HELP PAGE (FAQ) */
+
+
 /* Styles for each time section */
 .time-section {
   display: inline-block;
