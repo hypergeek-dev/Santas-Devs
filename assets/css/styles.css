@@ -154,3 +154,63 @@ h1, h2, h3, h4, h5, h6 {
 .form-range::-moz-range-thumb {
   background-color: #fff;
 }
+
+
+
+/* _____________________________________________________ */
+
+/* MEDIA QUERIES FOR CARD GENERATOR*/
+
+/* _____________________________________________________ */
+
+@media (max-width: 425px) {
+  #card-canvas {
+    width: 60%;
+    height: auto;
+    border: 2px solid #777777;
+  }
+}
+
+/* _____________________________________________________ */
+
+/* tablet screens */
+
+@media (min-width: 426px) and (max-width: 768px) {
+  #card-canvas {
+    width: 60%;
+    height: 400px;
+    border: 2px solid #777777;
+  }
+}
+
+/* _____________________________________________________ */
+
+/* Laptop screens */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #card-canvas {
+    width: 50%;
+    height: 300px;
+    border: 2px solid #777777;
+  }
+}
+
+
+/* _____________________________________________________ */
+
+/* Large screens */
+
+@media (min-width: 1025px) {
+  #card-canvas {
+    width: 50%;
+    height: auto;
+    border: 2px solid #777777;
+  }
+}
+
+
+
+
+
+
+
