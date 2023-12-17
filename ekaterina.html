@@ -20,9 +20,9 @@
       bottom: 20px; 
       right: 20px; 
       cursor: pointer;
-      /* background-color: #c50f0f; */
+      /* background-color: #A02C2C; */
       /* background-color: #262626; */
-      background-color: #0d430c;
+      background-color: #0B3D2E;
       padding-inline: 1rem;
       padding-block: 0.5rem;
       border-radius: 12px;
@@ -42,16 +42,24 @@
     }
 
     .modal-button {      
-      background-color: #0d430c;
-      border: 1px solid #DAA520;
+      background-color: #A02C2C;
     }
 
     .modal-button:hover {
-      background-color: #146713;
+      background-color: #a44646;
+    }
+
+    .modal-content {
+      background: linear-gradient(90deg, rgba(255, 255, 255, .65) 0%, #f8f9fa 50%, rgba(255, 255, 255, .65) 100%);
+      /* opacity: .8; */
     }
  
     /* ------------------------- COUNTDOWN */
    .countdown-container {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,18 +67,14 @@
     flex-wrap: wrap;
 
     padding: 1em;
-    /* border: 1px solid black; */
-    /* border-radius: 12px; */
-    /* overflow: hidden; */
-    max-width: 350px;
-    min-height: 200px;
+    max-width: 340px;
+    min-height: 302px;
     margin: auto;
 
-    /* background-image: url("./assets/images/countdown-timer/paper.jpg"); */
-    background-image: url("./assets/images/countdown-timer/paper2.jpg");
+    background: url("./assets/images/countdown-timer/bg-timer.png");
     background-position: center center;
-    background-size: cover;
-    box-shadow: 10px 5px 5px #262626;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
     margin-top: 1rem;
 
@@ -79,27 +83,26 @@
 
   /* .countdown-container::after {
     content: "";
-    background: url("./assets/images/countdown-timer/moon-santa.png") no-repeat top center;
-    background-size: cover;
-    opacity: 0.8;
+    background: url("./assets/images/countdown-timer/bg-timer.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
     inset: 0;
     position: absolute;
     z-index: -1; 
   } */
 
   .countdown-item {
-    /* margin-inline: .3em; */
     color: #eee6e6;
-    background-color: #262626;
-    /* border-radius: 12px; */
     padding-inline: 1em;
-    /* width: 60px; */
     flex: 1;
   }
 
   .count-time {
     font-size: 1.5em;
     font-weight: bold;
+    padding-top: .5em;
   }
 
   </style>
@@ -181,7 +184,50 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Long text goes here
+          <p>In winter's hush, a tale unfolds,
+            Of joy and warmth, as love beholds.
+            Snowflakes dance in moonlit glee,
+            A Christmas whisper, pure and free.
+            <img src="./assets/images/about-us/place-holder.png" alt="place holder" width="80" height="80">
+            Gifts wrapped tight with ribbons bright,
+            Kindred hearts in soft moonlight.
+            Carols sing in the frosty air,
+            A season's magic, everywhere.
+            
+            Gather close, by the fireside's glow,
+            Embrace the love that we bestow.
+            Peace on Earth, goodwill to men,
+            Merry Christmas, again, again.</p>
+            <img src="./assets/images/about-us/place-holder.png" alt="place holder" width="80" height="80">
+            <p>In winter's hush, a tale unfolds,
+              Of joy and warmth, as love beholds.
+              Snowflakes dance in moonlit glee,
+              A Christmas whisper, pure and free.
+              
+              Gifts wrapped tight with ribbons bright,
+              Kindred hearts in soft moonlight.
+              Carols sing in the frosty air,
+              A season's magic, everywhere.
+              
+              Gather close, by the fireside's glow,
+              Embrace the love that we bestow.
+              Peace on Earth, goodwill to men,
+              Merry Christmas, again, again.</p>
+
+              <p>In winter's hush, a tale unfolds,
+                Of joy and warmth, as love beholds.
+                Snowflakes dance in moonlit glee,
+                A Christmas whisper, pure and free.
+                
+                Gifts wrapped tight with ribbons bright,
+                Kindred hearts in soft moonlight.
+                Carols sing in the frosty air,
+                A season's magic, everywhere.
+                
+                Gather close, by the fireside's glow,
+                Embrace the love that we bestow.
+                Peace on Earth, goodwill to men,
+                Merry Christmas, again, again.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary modal-button" data-bs-dismiss="modal">Close</button>
