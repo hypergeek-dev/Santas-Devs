@@ -342,6 +342,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-size: .9rem;
   padding-inline: 1em;
+}
 
 .faq-content {
   background: linear-gradient(90deg, rgba(253, 244, 227, .65) 0%, #FDF4E3 50%, rgba(253, 244, 227, .65) 100%);
