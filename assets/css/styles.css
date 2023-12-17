@@ -72,12 +72,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Playlist modal at the bottom right */
 .playlist-modal {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 300px; /* Fixed width for the modal */
-  height: auto;
-  z-index: 1000;
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  width: 300px; /* Adjust as needed */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px;
   display: none; /* Initially hidden */
+  z-index: 1001; /* Above other elements */
 }
 
 
@@ -90,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Ensure close button is visible */
 .close-modal {
-  color: #000;
+  float: right;
   cursor: pointer;
 }
 
@@ -150,55 +153,4 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-range::-moz-range-thumb {
   background-color: #fff;
-}
-      
-/* _____________________________________________________ */
-
-/* MEDIA QUERIES FOR CARD GENERATOR*/
-
-/* _____________________________________________________ */
-
-@media (max-width: 425px) {
-  #card-canvas {
-    width: 60%;
-    height: auto;
-    border: 2px solid #777777;
-  }
-}
-
-/* _____________________________________________________ */
-
-/* tablet screens */
-
-@media (min-width: 426px) and (max-width: 768px) {
-  #card-canvas {
-    width: 60%;
-    height: 400px;
-    border: 2px solid #777777;
-  }
-}
-
-/* _____________________________________________________ */
-
-/* Laptop screens */
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  #card-canvas {
-    width: 50%;
-    height: 300px;
-    border: 2px solid #777777;
-  }
-}
-
-
-/* _____________________________________________________ */
-
-/* Large screens */
-
-@media (min-width: 1025px) {
-  #card-canvas {
-    width: 50%;
-    height: auto;
-    border: 2px solid #777777;
-  }
 }

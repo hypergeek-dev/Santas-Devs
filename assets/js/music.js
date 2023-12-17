@@ -96,16 +96,25 @@ document.addEventListener('DOMContentLoaded', function() {
     audioPlayer.currentTime = time;
   });
 
-  document.getElementById('playlist-toggle').addEventListener('click', function() {
+  // Toggle playlist modal visibility
+  function togglePlaylistModal() {
     var playlistModal = document.getElementById('playlist-modal');
-    playlistModal.style.display = playlistModal.style.display === 'block' ? 'none' : 'block';
     if (playlistModal.style.display === 'block') {
-      loadPlaylist();
+        playlistModal.style.display = 'none';
+    } else {
+        playlistModal.style.display = 'block';
+        loadPlaylist();
     }
+  }
+
+  // Event listener for the playlist toggle button
+  document.getElementById('playlist-toggle').addEventListener('click', function() {
+      togglePlaylistModal();
   });
 
+  // Event listener for the close button in the playlist modal
   document.querySelector('.close-modal').addEventListener('click', function() {
-    document.getElementById('playlist-modal').style.display = 'none';
+      togglePlaylistModal();
   });
 
   function updatePlayPauseIcon() {
