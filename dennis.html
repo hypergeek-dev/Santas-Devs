@@ -1,13 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Interactive Christmas Card</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Christmas Card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     body {
@@ -17,19 +14,19 @@
     }
 
     .grid-container {
-      position: relative; 
+      position: relative; /* Establish a new stacking context */
       width: 100vw;
       height: 100vh;
     }
 
     #rear_image_wrapper {
-      background: url('assets/images/main_xmas_image/rear_image/rear_image.png') no-repeat center center;
+      background: url('assets/images/rear_image.png') no-repeat center center;
       background-size: cover;
       position: absolute;
       top: 0;
       left: 0;
       width: 100vw;
-      height: 75vh; 
+      height: 100vh; /* Adjust if needed */
       z-index: 1;
     }
 
@@ -39,18 +36,17 @@
       top: 0;
       left: 0;
       width: 100vw;
-      height: 100vh; 
-      color:transparent
+      height: 100vh; /* Adjust height as needed */
     }
 
     #front_image_wrapper {
-      background: url('assets/images/main_xmas_image/front_image.png') no-repeat center center;
+      background: url('assets/images/front_image.png') no-repeat center center;
       background-size: cover;
       position: absolute;
       top: 0;
       left: 0;
       width: 100vw;
-      height: 100vh; 
+      height: 100vh; /* Adjust if needed */
       z-index: 3;
     }
 
@@ -69,13 +65,13 @@
       grid-template-columns: repeat(2, 1fr);
     }
     
-
+    /* Optional: Style for better visualization */
     div {
       border: 0.5px solid black;
       text-align: center;
     }
     
-
+    /* Sizes for each grid cell */
     .top1col { width: 51.12vw; }
     .top2col { width: 11.1vw; }
     .top3col1row1col { width: 18.14vw; }
@@ -121,7 +117,6 @@
       </div>
     </nav>
   </header>
-
   <div class="grid-container">
     <div id="rear_image_wrapper"></div>
     <div id="between-wrapper">
