@@ -2,7 +2,10 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   background-color: #fff;
-  color: #000; /* Black text color for body */
+  color: #000; 
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -155,8 +158,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
 }
 
-
-
 /* _____________________________________________________ */
 
 /* MEDIA QUERIES FOR CARD GENERATOR*/
@@ -208,9 +209,62 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.grid-container {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+}
+
+#rear_image_wrapper {
+  background: url('assets/images/rear_image.png') no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  z-index: 1;
+}
+
+#between-wrapper {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#front_image_wrapper {
+  background: url('assets/images/front_image.png') no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  z-index: 3;
+}
+
+.top-row, .bottom-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(10vh, auto);
+}
+
+.top3col, .bottom2col {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.top3col1row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
 
 
-
-
-
+.top1col, .top2col, .top3col1row1col, .top3col1row2col, .bottom1col, .bottom2col1row, .bottom2col2row, .bottom3col {
+  width: 100%;
+  height: 100%;
+}
