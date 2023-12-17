@@ -1,7 +1,14 @@
 body {
-  font-family: 'Lucida Handwriting', cursive;
+  font-family: 'Roboto', sans-serif;
   font-weight: bolder;
- 
+  background-color: #fff;
+  color: #000; /* Black text color for body */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: bold;
+  color: #FFD700;
 }
 
 /* Festive background colors for Christmas */
@@ -79,6 +86,86 @@ body {
 .foreground-div {
   background: url('assets/images/main_xmas_image/front_image.png') no-repeat center center;
   z-index: 99;
+}
+
+/* Style for Music Player Footer */
+.footer {
+  background-color: #282828;
+  padding: 10px;
+}
+
+.playlist {
+  background-color: #282828;
+  position: fixed;
+  bottom: 70px; /* Adjust height of the footer */
+  width: 100%;
+  padding: 10px;
+  display: none; /* Initially hidden */
+}
+
+.current-song {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.form-range {
+  width: 100%; /* Full width for volume and progress bar */
+}
+
+/* Centering the player controls */
+.player-controls {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Custom playlist toggle styles inspired by https://uiverse.io/vinodjangid07/tame-eagle-29 */
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .3s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(253, 255, 243);
+  border-radius: 5px;
+  transition-duration: .3s;
+}
+
+.toggle .bars {
+  background-color: #fff;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: translateY(14px) rotate(60deg);
+  margin-left: 0;
+  transform-origin: right;
+  transition-duration: .3s;
+  z-index: 2;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  transform: translateY(28px) rotate(-60deg);
+  transition-duration: .3s;
+  transform-origin: left;
+  z-index: 1;
+}
+
+#checkbox:checked + .toggle {
+  transform: rotate(-90deg);
 }
 
       

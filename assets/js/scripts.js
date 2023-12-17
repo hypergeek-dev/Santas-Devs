@@ -20,49 +20,6 @@ function updateCountdown() {
   }
 }
 
-// Music Playlist Functions
-var songs = ["deck-the-halls-xmas.mp3", "carol-of-the-bells-xmas-hip-hop-music.mp3", "enchanted-chimes.mp3", "jingle-family", "joyful-jingle", "silent-night_medium", "we-wish-you-a-merry-christmas-xmas"];
-var audioPlayer = document.getElementById('audioPlayer');
-var audioSource = document.getElementById('audioSource');
-var playlist = document.getElementById('playlist');
-var currentSong = 0;
-
-function loadPlaylist() {
-  songs.forEach(function(song, index) {
-      var listItem = document.createElement('li');
-      listItem.textContent = song;
-      listItem.setAttribute('data-index', index);
-      playlist.appendChild(listItem);
-  });
-}
-
-function playSong(index) {
-  currentSong = index;
-  audioSource.src = `assets/music/${songs[index]}`;
-  audioPlayer.load();
-  audioPlayer.play();
-}
-
-playlist.addEventListener('click', function(e) {
-  if (e.target && e.target.nodeName === "LI") {
-      playSong(e.target.getAttribute('data-index'));
-  }
-});
-
-function nextSong() {
-  if (currentSong < songs.length - 1) {
-      playSong(++currentSong);
-  }
-}
-
-function prevSong() {
-  if (currentSong > 0) {
-      playSong(--currentSong);
-  }
-}
-
-document.getElementById('nextButton').addEventListener('click', nextSong);
-document.getElementById('prevButton').addEventListener('click', prevSong);
 
 // Snow Effect
  // Amount of Snowflakes
