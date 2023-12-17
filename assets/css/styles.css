@@ -39,8 +39,8 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 
   padding: 1em;
-  max-width: 340px;
-  min-height: 302px;
+  /* max-width: 340px; */
+  /* min-height: 302px; */
   margin: auto;
 
   background: url("../images/countdown-timer/bg-timer.png");
@@ -48,9 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  margin-top: 1rem;
-
-  
+  margin-top: 1rem;  
 }
 
 .countdown-item {
