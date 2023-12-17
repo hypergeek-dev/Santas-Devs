@@ -72,15 +72,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Playlist modal at the bottom right */
 .playlist-modal {
   position: fixed;
-  bottom: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+  bottom: 60px; /* Adjust as needed */
+  right: 0px; /* Adjust as needed */
   width: 300px; /* Adjust as needed */
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 68, 33, 0.85);
   color: #fff;
-  border-radius: 5px;
+  border: 3px solid #014421;
   padding: 15px;
   display: none; /* Initially hidden */
-  z-index: 1001; /* Above other elements */
+  z-index: 1050; /* Above other elements */
+  overflow: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -143,14 +145,21 @@ h1, h2, h3, h4, h5, h6 {
 .player-controls {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Space between buttons */
+  align-items: center;
+  gap: 15px; /* Space between buttons */
 }
 
-/* White color for volume and progress sliders */
+/* Style for the slider thumbs */
 .form-range::-webkit-slider-thumb {
-  background-color: #fff;
+  background-color: #014421; /* Forest green thumb */
 }
 
 .form-range::-moz-range-thumb {
-  background-color: #fff;
+  background-color: #014421; /* Forest green thumb */
+} 
+
+.footer .btn-secondary {
+  background-color: #014421; /* Forest green background */
+  border: none; /* Remove border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
 }
