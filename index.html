@@ -1,103 +1,85 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interactive Christmas Card</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap"
-    rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/styles.css" rel="stylesheet">
+
   <style>
-    .overlay-container {
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+
+    .grid-container {
       position: relative;
-
-      margin: auto;
-    }
-
-    .background-div,
-    .middle-div,
-    .foreground-div {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .background-div {
-      background: url('assets/images/main_xmas_image/rear_image.png') no-repeat center center;
-
-      z-index: 1;
-    }
-
-    .middle-div-wrapper {
+      width: 100vw;
       height: 80vh;
     }
 
-    .middle-div {
+    #rear_image_wrapper {
+      background: url('assets/images/rear_image.png') no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 80vh;
+      z-index: 1;
+    }
+
+    #between-wrapper {
+      position: absolute;
       z-index: 2;
-
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
     }
 
-    #fire {
-      justify-self: center;
-      align-self: center;
-      z-index: 50;
-      opacity: 0.5;
-      filter: blur(10px);
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #ff9d00, #ff5700, #c70039, #900c3f);
-      background-size: 200% 200%;
-      animation: fireAnimation 2s infinite;
+    #front_image_wrapper {
+      background: url('assets/images/front_image.png') no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 80vh;
+      z-index: 3;
     }
 
-    @keyframes fireAnimation {
-      0% {
-        background-position: 0% 50%;
-        opacity: 0.4;
-      }
-
-      25% {
-        background-position: 25% 75%;
-        opacity: 0.5;
-      }
-
-      50% {
-        background-position: 50% 100%;
-        opacity: 0.4;
-      }
-
-      75% {
-        background-position: 75% 25%;
-        opacity: 0.3;
-      }
-
-      100% {
-        background-position: 100% 50%;
-        opacity: 0.5;
-      }
+    .top-row, .bottom-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(10vh, auto);
     }
 
+    .top3col, .bottom2col {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+    }
 
-    .foreground-div {
-      background: url('assets/images/gridsystem.png') no-repeat center center;
-      z-index: 99;
+    .top3col1row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+ 
+
+    .top1col, .top2col, .top3col1row1col, .top3col1row2col, .bottom1col, .bottom2col1row, .bottom2col2row, .bottom3col {
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -121,224 +103,38 @@
               <a class="nav-link" href="ekaterina.html">Ekaterina</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="atchutchi.html">Atchutchi</a>
+              <a class="nav-link" href="atchuchi.html">Atchutchi</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-
   </header>
-  <div class="text-center">
-    <h1>Merry Christmas!</h1>
-
-    <section>
-      <div class="overlay-container h-100">
-        <div class="background-div"></div>
-
-        <!----------------------------------------- COUNTDOWN TIMER -->
-        <div class="countdown-container top3col1row2col">
-          <div class="countdown-item" id="days">
-            <div id="days-count" class="count-time"></div>
-            <p>days</p>
+  
+  <div class="grid-container">
+    <div id="rear_image_wrapper"></div>
+    <div id="between-wrapper">
+      <div class="top-row">
+        <div class="top1col">top1col</div>
+        <div class="top2col">top2col</div>
+        <div class="top3col">
+          <div class="top3col1row">
+            <div class="top3col1row1col">top3col1row1col</div>
+            <div class="top3col1row2col">top3col1row2col</div>
           </div>
-
-          <div class="countdown-item" id="hours">
-            <div id="hours-count" class="count-time"></div>
-            <p>hours</p>
-          </div>
-
-          <div class="countdown-item" id="minutes">
-            <div id="minutes-count" class="count-time"></div>
-            <p>min</p>
-          </div>
-
-          <div class="countdown-item" id="seconds">
-            <div id="seconds-count" class="count-time"></div>
-            <p>sec</p>
-          </div>
-        </div>
-        <!----------------------------------------- END COUNTDOWN TIMER -->       
-
-        <div class="middle-div-wrapper row d-flex flex-column align-items-start">
-          <div class="col middle-div h-100" id="snow-container" style="position: relative;"></div>
-          <!-- Removed the duplicate ID for the second snow-container -->
-          <div class="col h-100" id="fire"></div>
-        </div>
-        <div class="foreground-div"></div>
-      </div>
-
-      <!----------------------------------------- MODAL HELP PAGE -->  
-      <!-- button -->
-      <button type="button" class="faq-button" data-bs-toggle="modal" data-bs-target="#faqModal">
-        <img src="./assets/images/faq/faq-gold.png" alt="question mark" width="25" height="40">
-      </button>  
-      
-      <!-- page -->
-      <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="helpPageModal" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content faq-content">
-            <div class="modal-header faq-header">
-              <h5 class="modal-title modal-header faq-title" id="helpPageModal">FAQ</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body faq-body">
-              <p>In winter's hush, a tale unfolds,
-                Of joy and warmth, as love beholds.
-                Snowflakes dance in moonlit glee,
-                A Christmas whisper, pure and free.
-                <img src="./assets/images/about-us/place-holder.png" alt="place holder" width="80" height="80">
-                Gifts wrapped tight with ribbons bright,
-                Kindred hearts in soft moonlight.
-                Carols sing in the frosty air,
-                A season's magic, everywhere.
-    
-                Gather close, by the fireside's glow,
-                Embrace the love that we bestow.
-                Peace on Earth, goodwill to men,
-                Merry Christmas, again, again.
-              </p>
-              <img src="./assets/images/about-us/place-holder.png" alt="place holder" width="80" height="80">
-              <p>In winter's hush, a tale unfolds,
-                Of joy and warmth, as love beholds.
-                Snowflakes dance in moonlit glee,
-                A Christmas whisper, pure and free.
-    
-                Gifts wrapped tight with ribbons bright,
-                Kindred hearts in soft moonlight.
-                Carols sing in the frosty air,
-                A season's magic, everywhere.
-    
-                Gather close, by the fireside's glow,
-                Embrace the love that we bestow.
-                Peace on Earth, goodwill to men,
-                Merry Christmas, again, again.</p>
-    
-              <p>In winter's hush, a tale unfolds,
-                Of joy and warmth, as love beholds.
-                Snowflakes dance in moonlit glee,
-                A Christmas whisper, pure and free.
-    
-                Gifts wrapped tight with ribbons bright,
-                Kindred hearts in soft moonlight.
-                Carols sing in the frosty air,
-                A season's magic, everywhere.
-    
-                Gather close, by the fireside's glow,
-                Embrace the love that we bestow.
-                Peace on Earth, goodwill to men,
-                Merry Christmas, again, again.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary modal-button faq-close-btn"
-                data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
+          <div class="top3col2row">top3col2row</div>
         </div>
       </div>
-      <!----------------------------------------- END MODAL HELP PAGE -->
-    </section>
+      <div class="bottom-row">
+        <div class="bottom1col">bottom1col</div>
+        <div class="bottom2col">
+          <div class="bottom2col1row">bottom2col1row</div>
+          <div class="bottom2col2row">bottom2col2row</div>
+        </div>
+        <div class="bottom3col">bottom3col</div>
+      </div>
+    </div>
+    <div id="front_image_wrapper"></div>
+  </div>
 </body>
-
-</html>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- <script src="assets\js\scripts.js"></script> -->
-<script src="assets/js/scripts.js"></script>
-<script src="assets/js/timer.js"></script>
-<script>// Snow.js - Confined to a Specific Div
-  // Amount of Snowflakes
-  var snowMax = 750;
-
-  // Snowflake Colours
-  var snowColor = ["#DDD", "#EEE"];
-
-  // Snow Entity
-  var snowEntity = "&#x2022;";
-
-  // Falling Velocity
-  var snowSpeed = 0.75;
-
-  // Minimum Flake Size
-  var snowMinSize = 8;
-
-  // Maximum Flake Size
-  var snowMaxSize = 24;
-
-  // Refresh Rate (in milliseconds)
-  var snowRefresh = 50;
-
-  // Additional Styles
-  var snowStyles = "cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;";
-
-  // Variables for snowflakes and position
-  var snow = [], pos = [], coords = [], lefr = [], marginBottom, marginRight, snowContainer;
-
-  function randomise(range) {
-    return Math.floor(range * Math.random());
-  }
-
-  function initSnow() {
-    snowContainer = document.getElementById('snow-container');
-    var snowSize = snowMaxSize - snowMinSize;
-    marginBottom = snowContainer.clientHeight - 5;
-    marginRight = snowContainer.clientWidth - 15;
-
-    for (var i = 0; i <= snowMax; i++) {
-      coords[i] = 0;
-      lefr[i] = Math.random() * 15;
-      pos[i] = 0.03 + Math.random() / 10;
-
-      var flake = document.createElement('span');
-      flake.id = 'flake' + i;
-      flake.innerHTML = snowEntity;
-      flake.style.cssText = snowStyles + "position:absolute;top:-" + snowMaxSize;
-      snowContainer.appendChild(flake);
-
-      snow[i] = flake;
-      snow[i].style.fontFamily = "inherit";
-      snow[i].size = randomise(snowSize) + snowMinSize;
-      snow[i].style.fontSize = snow[i].size + "px";
-      snow[i].style.color = snowColor[randomise(snowColor.length)];
-      snow[i].style.zIndex = 2;
-      snow[i].sink = snowSpeed * snow[i].size / 5;
-      snow[i].posX = randomise(marginRight - snow[i].size);
-      snow[i].posY = randomise(2 * marginBottom - marginBottom - 2 * snow[i].size);
-      snow[i].style.left = snow[i].posX + "px";
-      snow[i].style.top = snow[i].posY + "px";
-    }
-
-    moveSnow();
-  }
-
-  function resize() {
-    if (!snowContainer) {
-      return;
-    }
-    marginBottom = snowContainer.clientHeight - 5;
-    marginRight = snowContainer.clientWidth - 50;
-  }
-
-  function moveSnow() {
-    for (var i = 0; i <= snowMax; i++) {
-      coords[i] += pos[i];
-      snow[i].posY += snow[i].sink;
-      snow[i].style.left = snow[i].posX + lefr[i] * Math.sin(coords[i]) + "px";
-      snow[i].style.top = snow[i].posY + "px";
-
-      if (snow[i].posY >= marginBottom - 2 * snow[i].size || parseInt(snow[i].style.left) > (marginRight - 3 * lefr[i])) {
-        snow[i].posX = randomise(marginRight - snow[i].size);
-        snow[i].posY = 0;
-      }
-    }
-    setTimeout(moveSnow, snowRefresh);
-  }
-
-  // Event listeners
-  window.addEventListener('resize', resize);
-  window.addEventListener('load', initSnow);
-</script>
-</body>
-
 </html>
