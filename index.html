@@ -1,10 +1,15 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interactive Christmas Card</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Bootstrap icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link href="assets/css/styles.css" rel="stylesheet">
+
 
   <style>
     body {
@@ -55,13 +60,15 @@
       z-index: 3;
     }
 
-    .top-row, .bottom-row {
+    .top-row,
+    .bottom-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-auto-rows: minmax(10vh, auto);
     }
 
-    .top3col, .bottom2col {
+    .top3col,
+    .bottom2col {
       display: grid;
       grid-template-rows: repeat(2, 1fr);
     }
@@ -72,6 +79,17 @@
     }
  
     .top1col, .top2col, .top3col1row1col, .top3col1row2col, .bottom1col, .bottom2col1row, .bottom2col2row, .bottom3col {
+
+
+
+    .top1col,
+    .top2col,
+    .top3col1row1col,
+    .top3col1row2col,
+    .bottom1col,
+    .bottom2col1row,
+    .bottom2col2row,
+    .bottom3col {
       width: 100%;
       height: 100%;
 
@@ -117,12 +135,14 @@
 
   </style>
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -153,6 +173,7 @@
       </div>
     </nav>
   </header>
+
   <div class="grid-container">
     <div id="rear_image_wrapper"></div>
     <div id="between-wrapper">
@@ -162,7 +183,33 @@
         <div class="top3col">
           <div class="top3col1row">
             <div class="top3col1row1col">top3col1row1col</div>
-            <div class="top3col1row2col">top3col1row2col</div>
+            
+            <div class="top3col1row2col">
+              <!-------------------------------------------- COUNTDOWN TIMER -->
+              <div class="countdown-container">
+                <div class="countdown-item" id="days">
+                  <div id="days-count" class="count-time"></div>
+                  <p>days</p>
+                </div>
+
+                <div class="countdown-item" id="hours">
+                  <div id="hours-count" class="count-time"></div>
+                  <p>hours</p>
+                </div>
+
+                <div class="countdown-item" id="minutes">
+                  <div id="minutes-count" class="count-time"></div>
+                  <p>min</p>
+                </div>
+
+                <div class="countdown-item" id="seconds">
+                  <div id="seconds-count" class="count-time"></div>
+                  <p>sec</p>
+                </div>
+              </div>
+            </div>
+              <!-------------------------------------------- END COUNTDOWN TIMER -->
+
           </div>
           <div class="top3col2row">top3col2row</div>
         </div>
@@ -178,5 +225,80 @@
     </div>
     <div id="front_image_wrapper"></div>
   </div>
+
+  <!---------------------------------------------------------- HELP PAGE MODAL -->
+  <!-- button -->
+  <button type="button" class="faq-button" data-bs-toggle="modal" data-bs-target="#faqModal">
+    <img src="./assets/images/faq/faq-gold.png" alt="question mark" width="25" height="40">
+  </button>
+
+  <!-- page -->
+  <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="helpPageModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content faq-content">
+        <div class="modal-header faq-header">
+          <h5 class="modal-title modal-header faq-title" id="helpPageModal">FAQ</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body faq-body">
+          <p>In winter's hush, a tale unfolds,
+            Of joy and warmth, as love beholds.
+            Snowflakes dance in moonlit glee,
+            A Christmas whisper, pure and free.
+            <img src="./assets/images/about-us/place-holder.png" alt="place holder" width="80" height="80">
+            Gifts wrapped tight with ribbons bright,
+            Kindred hearts in soft moonlight.
+            Carols sing in the frosty air,
+            A season's magic, everywhere.
+
+            Gather close, by the fireside's glow,
+            Embrace the love that we bestow.
+            Peace on Earth, goodwill to men,
+            Merry Christmas, again, again.
+          </p>
+          <img src="./assets/images/about-us/place-holder.png" alt="place holder" width="80" height="80">
+          <p>In winter's hush, a tale unfolds,
+            Of joy and warmth, as love beholds.
+            Snowflakes dance in moonlit glee,
+            A Christmas whisper, pure and free.
+
+            Gifts wrapped tight with ribbons bright,
+            Kindred hearts in soft moonlight.
+            Carols sing in the frosty air,
+            A season's magic, everywhere.
+
+            Gather close, by the fireside's glow,
+            Embrace the love that we bestow.
+            Peace on Earth, goodwill to men,
+            Merry Christmas, again, again.</p>
+
+          <p>In winter's hush, a tale unfolds,
+            Of joy and warmth, as love beholds.
+            Snowflakes dance in moonlit glee,
+            A Christmas whisper, pure and free.
+
+            Gifts wrapped tight with ribbons bright,
+            Kindred hearts in soft moonlight.
+            Carols sing in the frosty air,
+            A season's magic, everywhere.
+
+            Gather close, by the fireside's glow,
+            Embrace the love that we bestow.
+            Peace on Earth, goodwill to men,
+            Merry Christmas, again, again.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary modal-button faq-close-btn"
+            data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------------------------------------------------- HELP PAGE MODAL -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/timer.js"></script>
+
 </body>
 </html>

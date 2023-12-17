@@ -1,56 +1,168 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Interactive Christmas Card</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/cs/styles.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="card_gen.html">Card Generator</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="dennis.html">Daniel</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ruksana.html">Ruksana</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ekaterina.html">Ekaterina </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="atchutchi.html">Atchutchi</a>
-              </li>
-            </ul>
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Christmas Card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="card_gen.html">Card Generator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dennis.html">Daniel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ruksana.html">Ruksana</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ekaterina.html">Ekaterina </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="atchutchi.html">Atchutchi</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      
-      
-    </header>
- 
-  
-  </body>
-  </html>
-  
+      </div>
+    </nav>
+
+
+  </header>
+
+  <h1 class="text-center mt-3">Create a card</h1>
+
+  <!-- Image selection carousel -->
+  <div id="carouselExampleIndicators" class="carousel slide card-carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+        aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets\images\image_1.jpg" class="d-block w-100" alt="Red Christmas Background">
+      </div>
+      <div class="carousel-item">
+        <img src="assets\images\image_2.jpg" class="d-block w-100" alt="Bells Christmas Background">
+      </div>
+      <div class="carousel-item">
+        <img src="assets\images\image_3.jpg" class="d-block w-100" alt="Lantern Christmas Background">
+      </div>
+      <div class="carousel-item">
+        <img src="assets\images\image_4.jpg" class="d-block w-100" alt="White Christmas Background">
+      </div>
+      <div class="carousel-item">
+        <img src="assets\images\image_5.jpg" class="d-block w-100" alt="Present Christmas Background">
+      </div>
+      <div class="carousel-item">
+        <img src="assets\images\image_6.jpg" class="d-block w-100" alt="Tree Christmas Background">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- card creation canvas -->
+  <div class="row text-center mt-3">
+    <div class="col-sm-12">
+      <canvas id="card-canvas"></canvas>
+    </div>
+  </div>
+
+  <!-- create the card -->
+  <div class="row text-center">
+    <div class="col-sm-12">
+
+      <form id="cardForm">
+        <!-- 1. Adding background -->
+        <label for="background">Add your background</label>
+        <br>
+        <select name="b" id="background" class="mb-3" required>
+          <option value="1">Background 1</option>
+          <option value="2">Background 2</option>
+          <option value="3">Background 3</option>
+          <option value="4">Background 4</option>
+          <option value="5">Background 5</option>
+          <option value="6">Background 6</option>
+        </select>
+        <br>
+
+        <!-- 2. Adding recipient -->
+        <label for="recipient">Add recipient</label>
+        <br>
+        <input name="r" type="text" id="recipient" class="mb-3" required>
+        <br>
+
+        <!-- Adding greeting -->
+        <label for="greeting">Add your greeting</label>
+        <br>
+        <input name="g" type="text" id="greeting" class="mb-3" required>
+        <br>
+
+        <!-- Adding sender -->
+        <label for="sender">Add senders name</label>
+        <br>
+        <input name="s" type="text" id="sender" class="mb-3" required>
+        <br>
+
+        <!--Generates shareable link-->
+        <p><button type="submit">Create link</button></p>
+      </form>
+
+      <!--Link text is displayed in this box-->
+      <p>Copy this link to share your card:</p>
+      <p><input id="cardUrl" readonly type="text"></p>
+
+      <!-- 3. Download the image link -->
+      <div class="row text-center mb-3">
+        <div class="col-12">
+          <a href="" id="card-download" download="my-card.png">Download Your Card Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/scripts.js"></script>
-  </body>
-  </html>
+  <script src="assets/js/card.js"></script>
+</body>
+
+</html>

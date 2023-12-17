@@ -113,38 +113,38 @@
       <div class="col-sm-12">
 
         <form id="cardForm">
-        <!-- 1. Adding background -->
-        <label for="background">Add your background</label>
-        <br>
-        <select name="b" id="background" class="mb-3" required>
-          <option value="1">Background 1</option>
-          <option value="2">Background 2</option>
-          <option value="3">Background 3</option>
-          <option value="4">Background 4</option>
-          <option value="5">Background 5</option>
-          <option value="6">Background 6</option>
-        </select>
-        <br>
+          <!-- 1. Adding background -->
+          <label for="background">Add your background</label>
+          <br>
+          <select name="b" id="background" class="mb-3" required>
+            <option value="1">Background 1</option>
+            <option value="2">Background 2</option>
+            <option value="3">Background 3</option>
+            <option value="4">Background 4</option>
+            <option value="5">Background 5</option>
+            <option value="6">Background 6</option>
+          </select>
+          <br>
 
-        <!-- 2. Adding recipient -->
-        <label for="recipient">Add recipient</label>
-        <br>
-        <input name="r" type="text" id="recipient" class="mb-3" required>
-        <br>
+          <!-- 2. Adding recipient -->
+          <label for="recipient">Add recipient</label>
+          <br>
+          <input name="r" type="text" id="recipient" class="mb-3" required>
+          <br>
 
-        <!-- Adding greeting -->
-        <label for="greeting">Add your greeting</label>
-        <br>
-        <input name="g" type="text" id="greeting" class="mb-3" required>
-        <br>
+          <!-- Adding greeting -->
+          <label for="greeting">Add your greeting</label>
+          <br>
+          <input name="g" type="text" id="greeting" class="mb-3" required>
+          <br>
 
-        <!-- Adding sender -->
-        <label for="sender">Add senders name</label>
-        <br>
-        <input name="s" type="text" id="sender" class="mb-3" required>
-        <br>
+          <!-- Adding sender -->
+          <label for="sender">Add senders name</label>
+          <br>
+          <input name="s" type="text" id="sender" class="mb-3" required>
+          <br>
 
-        <!--Generates shareable link-->
+          <!--Generates shareable link-->
           <p><button type="submit">Create link</button></p>
         </form>
 
@@ -171,8 +171,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
 
-    <!-- Card generator JS -->
     <script>
+
       /**
         * @type HTMLCanvasElement
       */
@@ -186,7 +186,7 @@
       let recipientText = document.getElementById('recipient')
       let greeting = document.getElementById('greeting')
       let senderText = document.getElementById('sender')
-      
+
       // EVENT LISTENERS
       // make the card
       backgroundSelect.addEventListener('change', createCard);
@@ -255,7 +255,7 @@
       // Creating the shareable link
       const cardForm = document.getElementById("cardForm");
 
-      cardForm.addEventListener("submit", function(e) {
+      cardForm.addEventListener("submit", function (e) {
         e.preventDefault();
         // base URL to display the card to the recipient
         const cardUrl = new URL('view-card.html', window.location.href);
@@ -270,9 +270,9 @@
         const urlField = document.getElementById("cardUrl");
         urlField.value = cardUrl.toString();
 
-    });
-    // Renders the canvas on load so that it displays the first image (instead of being empty)
-    createCard();
+      });
+      // Renders the canvas on load so that it displays the first image (instead of being empty)
+      createCard();
 
     </script>
 
