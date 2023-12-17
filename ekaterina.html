@@ -15,85 +15,94 @@
     }
 
      /* ------------------------- FAQ */
-    .faq-container {
+    .faq-button {
       position: fixed; 
       bottom: 20px; 
       right: 20px; 
       cursor: pointer;
-      background-color: rgb(77, 194, 34);
+      /* background-color: #A02C2C; */
+      /* background-color: #262626; */
+      background-color: #0B3D2E;
       padding-inline: 1rem;
       padding-block: 0.5rem;
       border-radius: 12px;
-    }
-    .faq-container1 {
-      position: fixed; 
-      bottom: 20px; 
-      right: 100px; 
-      cursor: pointer;
-      /* background-color: rgb(77, 194, 34); */
-      padding-inline: 1rem;
-      padding-block: 0.5rem;
-      border-radius: 12px;
-    }
-    .faq-container2 {
-      position: fixed; 
-      bottom: 20px; 
-      right: 180px; 
-      cursor: pointer;
-      background-color: rgb(13, 221, 218);
-      padding-inline: 1rem;
-      padding-block: 0.5rem;
-      border-radius: 12px;
-    }
-    .faq-container3 {
-      position: fixed; 
-      bottom: 20px; 
-      right: 260px; 
-      cursor: pointer;
-      background-color: black;
-      padding-inline: 1rem;
-      padding-block: 0.5rem;
-      border-radius: 12px;
+      border: 1px solid #DAA520;
+      transition: transform 0.3s ease-in-out;
     }
 
-   /* ------------------------- COUNTDOWN */
+    .faq-button:hover {
+      transform: scale(1.1);
+    }
+
+    .modal-header {
+      font-size: 1.2rem;
+      color: #0d430c;
+      text-shadow: #DAA520;
+      font-weight: 700;
+    }
+
+    .modal-button {      
+      background-color: #A02C2C;
+    }
+
+    .modal-button:hover {
+      background-color: #a44646;
+    }
+
+    .modal-content {
+      background: linear-gradient(90deg, rgba(255, 255, 255, .65) 0%, #f8f9fa 50%, rgba(255, 255, 255, .65) 100%);
+      /* opacity: .8; */
+    }
+ 
+    /* ------------------------- COUNTDOWN */
    .countdown-container {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: .4rem;
+    flex-wrap: wrap;
 
     padding: 1em;
-    border: 1px solid black;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 50vw;
-    min-height: 200px;
+    max-width: 340px;
+    min-height: 302px;
     margin: auto;
 
-    position: relative;
+    background: url("./assets/images/countdown-timer/bg-timer.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    margin-top: 1rem;
+
+    /* position: relative; */
   }
 
-  .countdown-container::after {
+  /* .countdown-container::after {
     content: "";
-    background: url("./assets/images/moon-santa.png") no-repeat top center;
-    background-size: cover;
-    opacity: 0.8;
+    background: url("./assets/images/countdown-timer/bg-timer.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
     inset: 0;
     position: absolute;
     z-index: -1; 
-  }
+  } */
 
   .countdown-item {
-    margin-inline: 1em;
     color: #eee6e6;
-    background-color: rgb(192, 28, 28);
-    border-radius: 12px;
     padding-inline: 1em;
+    flex: 1;
   }
 
   .count-time {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
+    padding-top: .5em;
   }
 
   </style>
@@ -138,7 +147,6 @@
   </header>
 
   <div class="text-center">
-    <h1>Workspace 3</h1>
   </div>
   <div class="countdown-container">
     <div class="countdown-item" id="days">
@@ -162,32 +170,67 @@
     </div>
   </div>
 
-  <button type="button" class="faq-container" data-bs-toggle="modal" data-bs-target="#faqModal">
-    <img src="./assets/images/faq/faq.png" alt="question mark" width="30" height="50">
+  <button type="button" class="faq-button" data-bs-toggle="modal" data-bs-target="#faqModal">
+    <img src="./assets/images/faq/faq-gold.png" alt="question mark" width="25" height="40">
   </button>
-  <div class="faq-container1">
-    <img src="./assets/images/faq/faq-red.png" alt="question mark" width="50" height="50">
-  </div>
-  <div class="faq-container2">
-    <img src="./assets/images/faq/faq-moon.png" alt="question mark" width="30" height="50">
-  </div>
-  <div class="faq-container3">
-    <img src="./assets/images/faq/faq-gold.png" alt="question mark" width="30" height="50">
-  </div>
+
 
   <!-- Modal -->
   <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">FAQ</h5>
+          <h5 class="modal-title modal-header" id="exampleModalLabel">FAQ</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Long text goes here
+          <p>In winter's hush, a tale unfolds,
+            Of joy and warmth, as love beholds.
+            Snowflakes dance in moonlit glee,
+            A Christmas whisper, pure and free.
+            <img src="./assets/images/about-us/place-holder.png" alt="place holder" width="80" height="80">
+            Gifts wrapped tight with ribbons bright,
+            Kindred hearts in soft moonlight.
+            Carols sing in the frosty air,
+            A season's magic, everywhere.
+            
+            Gather close, by the fireside's glow,
+            Embrace the love that we bestow.
+            Peace on Earth, goodwill to men,
+            Merry Christmas, again, again.</p>
+            <img src="./assets/images/about-us/place-holder.png" alt="place holder" width="80" height="80">
+            <p>In winter's hush, a tale unfolds,
+              Of joy and warmth, as love beholds.
+              Snowflakes dance in moonlit glee,
+              A Christmas whisper, pure and free.
+              
+              Gifts wrapped tight with ribbons bright,
+              Kindred hearts in soft moonlight.
+              Carols sing in the frosty air,
+              A season's magic, everywhere.
+              
+              Gather close, by the fireside's glow,
+              Embrace the love that we bestow.
+              Peace on Earth, goodwill to men,
+              Merry Christmas, again, again.</p>
+
+              <p>In winter's hush, a tale unfolds,
+                Of joy and warmth, as love beholds.
+                Snowflakes dance in moonlit glee,
+                A Christmas whisper, pure and free.
+                
+                Gifts wrapped tight with ribbons bright,
+                Kindred hearts in soft moonlight.
+                Carols sing in the frosty air,
+                A season's magic, everywhere.
+                
+                Gather close, by the fireside's glow,
+                Embrace the love that we bestow.
+                Peace on Earth, goodwill to men,
+                Merry Christmas, again, again.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary modal-button" data-bs-dismiss="modal">Close</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
       </div>

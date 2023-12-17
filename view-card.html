@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Christmas Card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="card_gen.html">Card Generator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="daniel.html">Daniel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ruksana.html">Ruksana</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ekaterina.html">Ekaterina </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="atchuchi.html">Atchutchi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <div class="text-center">
+    <h1>Workspace 2</h1>
+
+    <h1 class="text-center mt-3">View your card</h1>
+
+
+    <!-- card creation canvas -->
+    <div class="row text-center mt-3">
+      <div class="col-sm-12">
+        <canvas id="card-canvas"></canvas>
+      </div>
+    </div>
+
+
+    <footer class="mt-3">
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+
+    <!-- Card generator JS -->
+    <script>
+      /**
+        * @type HTMLCanvasElement
+      */
+
+      let cardCanvas = document.getElementById('card-canvas')
+      let context = cardCanvas.getContext('2d')
+
+      // Function to create the card
+      function createCard(backgroundUrl, recipient, text, sender) {
+        // 1. Clear the canvas
+        context.clearRect(0, 0, cardCanvas.width, cardCanvas.height);
+
+        // 2. Load and draw the background image
+        let backgroundImage = new Image();
+        backgroundImage.src = backgroundUrl;
+        backgroundImage.onload = function () {
+          context.drawImage(backgroundImage, 0, 0, cardCanvas.width, cardCanvas.height);
+
+          // 3. Draw the text on top of the background image
+
+          // left align
+          // Calculate the coordinates to horizontally center the text
+          const x = 30
+          const y = 75
+
+          context.fillText(recipient, x, y - 20);
+          context.fillText(text, x, y);
+          context.fillText(sender, x, y + 20);
+        }
+      }
+
+
+      // extract encoded parameters from the URL hash (not including the leading # character)
+      const encodedParams = window.location.hash.substring(1);
+      // reverse the base64 encoding and parse
+      const params = new URLSearchParams(atob(encodedParams));
+
+      let backgroundUrl = `assets/images/image_${params.get('b')}.jpg`;
+      const recipient = params.get('r');
+      const text = params.get('g');
+      const sender = params.get('s');
+
+      createCard(backgroundUrl, recipient, text, sender);
+
+    </script>
+
+
+  </div>
