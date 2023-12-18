@@ -311,12 +311,7 @@ h6 {
 }
 
 #front_image_wrapper {
-<<<<<<< HEAD
-  background: url('/assets/images/front_image.png') no-repeat center center;
-
-=======
   background: url('../assets/images/front_image.png') no-repeat center center;
->>>>>>> 3e6762be014cb6fd42afb46004ad44fa1267fe34
   background-size: cover;
   position: absolute;
   top: 0;
@@ -333,6 +328,10 @@ h6 {
 }
 
 /* -------------------------------- COUNTDOWN TIMER */
+.countdown-wrapper {
+position: relative;
+}
+
 .countdown-container {
   display: flex;
   justify-content: center;
@@ -348,6 +347,8 @@ h6 {
   /* border-radius: .5rem; */
 
   margin-top: 1rem;
+  position: absolute;
+  right: 2.3em;
 }
 
 .countdown-item {
@@ -364,6 +365,7 @@ h6 {
   font-weight: bold;
   padding-top: .5em;
 }
+
 
 /* -------------------------------- END COUNTDOWN TIMER */
 
