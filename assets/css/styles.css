@@ -281,7 +281,7 @@ h6 {
 .grid-container {
   position: relative;
   width: 100vw;
-  height: 80vh;
+  height: 10vh;
 }
 
 #rear_image_wrapper {
@@ -295,7 +295,7 @@ h6 {
   z-index: 1;
 }
 
-#between-wrapper {
+#between_wrapper {
   position: absolute;
   z-index: 2;
   top: 0;
