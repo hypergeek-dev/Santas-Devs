@@ -51,40 +51,58 @@
 
   <h1 class="text-center mt-3">Create a card</h1>
 
-  <!-- Image selection carousel -->
-  <div id="carouselExampleIndicators" class="carousel slide card-carousel">
+  <!-- Image selection carousel 2 -->
+  <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
+        aria-current="true" aria-label="Slide 0"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
+        aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+        aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-        aria-label="Slide 4"></button>
+        aria-label="Slide 3"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-        aria-label="Slide 5"></button>
+        aria-label="Slide 4"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-        aria-label="Slide 6"></button>
+        aria-label="Slide 5"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="assets\images\image_1.jpg" class="d-block w-100" alt="Red Christmas Background">
+        <div class="carousel-caption">
+          <h5>Red Christmas Background</h5>
+        </div>
       </div>
       <div class="carousel-item">
         <img src="assets\images\image_2.jpg" class="d-block w-100" alt="Bells Christmas Background">
+        <div class="carousel-caption">
+          <h5>Bells Christmas Background</h5>
+        </div>
       </div>
       <div class="carousel-item">
         <img src="assets\images\image_3.jpg" class="d-block w-100" alt="Lantern Christmas Background">
+        <div class="carousel-caption">
+          <h5>Lantern Christmas Background</h5>
+        </div>
       </div>
       <div class="carousel-item">
         <img src="assets\images\image_4.jpg" class="d-block w-100" alt="White Christmas Background">
+        <div class="carousel-caption">
+          <h5>White Christmas Background</h5>
+        </div>
       </div>
       <div class="carousel-item">
         <img src="assets\images\image_5.jpg" class="d-block w-100" alt="Present Christmas Background">
+        <div class="carousel-caption">
+          <h5>Present Christmas Background</h5>
+        </div>
       </div>
       <div class="carousel-item">
         <img src="assets\images\image_6.jpg" class="d-block w-100" alt="Tree Christmas Background">
+        <div class="carousel-caption">
+          <h5>Tree Christmas Background</h5>
+        </div>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -116,12 +134,12 @@
         <label for="background">Add your background</label>
         <br>
         <select name="b" id="background" class="mb-3" required>
-          <option value="1">Background 1</option>
-          <option value="2">Background 2</option>
-          <option value="3">Background 3</option>
-          <option value="4">Background 4</option>
-          <option value="5">Background 5</option>
-          <option value="6">Background 6</option>
+          <option value="1">Red Christmas Background</option>
+          <option value="2">Bells Christmas Background</option>
+          <option value="3">Lantern Christmas Background</option>
+          <option value="4">White Christmas Background</option>
+          <option value="5">Present Christmas Background</option>
+          <option value="6">Tree Christmas Background</option>
         </select>
         <br>
 
@@ -144,7 +162,8 @@
         <br>
 
         <!--Generates shareable link-->
-        <p><button type="submit">Create link</button></p>
+        <button type="submit" class="btn btn-warning">Create link</button>
+        <!-- <p><button type="submit">Create link</button></p> -->
       </form>
 
       <!--Link text is displayed in this box-->
