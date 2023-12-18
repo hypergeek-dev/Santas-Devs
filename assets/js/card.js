@@ -35,6 +35,18 @@ function createCard() {
     let backgroundImage = new Image();
     backgroundImage.src = backgroundUrl;
     backgroundImage.onload = function () {
+
+        // Calculate the aspect ratio of the image
+        const aspectRatio = backgroundImage.width / backgroundImage.height;
+
+        // Calculate the dimensions of the canvas based on the image aspect ratio
+        let canvasWidth = cardCanvas.parentElement.offsetWidth * 0.6;
+        let canvasHeight = canvasWidth / aspectRatio;
+
+        // Set the canvas dimensions
+        cardCanvas.width = canvasWidth;
+        cardCanvas.height = canvasHeight;
+
         context.drawImage(backgroundImage, 0, 0, cardCanvas.width, cardCanvas.height);
 
         // 4. Draw the text on top of the background image
@@ -48,6 +60,7 @@ function createCard() {
         const x = 30
         const y = 75
 
+        context.font = "18px Lucida Calligraphy";
         context.fillText(recipient, x, y - 20);
         context.fillText(text, x, y);
         context.fillText(sender, x, y + 20);
