@@ -62,6 +62,16 @@ Instructions on how to install the project:
 
 Describe the development process and setup. Include information about tools, best practices, coding standards, etc.
 
+**Card Generator - creating the card**
+
+- A Bootstrap carousel displays background images for user selection via a dropdown menu.
+- The input options allow a user to add a recipient, greeting message and a sender.
+- The chosen background and text can be viewed as a preview window using HTML canvas.
+- The chosen design - both image and text can be seen in real-time.
+- Users can add text and change text before being ready to share.
+- Once ready they, can click the share button to get a shareable link. 
+
+
 **Card Generator - Sharing the card using a link**
 
 When the user clicks the 'create link' button on the card generator form, a 

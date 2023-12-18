@@ -10,7 +10,7 @@
 
   <style>
     body {
-      background: url("./assets/images/main_xmas_image/front_image.png") no-repeat center center fixed;
+      background: url("./assets/images/front_image.png") no-repeat center center fixed;
       background-size: cover;
     }
 
@@ -71,20 +71,27 @@
     right: 0; */
 
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: .4rem;
       flex-wrap: wrap;
 
       padding: 1em;
+      padding-bottom: 2em;
       max-width: 340px;
       min-height: 302px;
       margin: auto;
 
-      background: url("./assets/images/countdown-timer/bg-timer.png");
-      background-position: center center;
+      /* background: url("./assets/images/countdown-timer/bg-timer.png"); */
+      /* background: url("./assets/images/countdown-timer/bg-timer1.png"); */
+      /* background-position: center center;
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: 50% 170%; */
+      background-color: #FDF4E3;
+      border: 3px solid #A02C2C;
+      box-shadow: 0px 0px 5px 0px rgba(128, 0, 0, 1);
+      max-width: 120px;
 
       margin-top: 1rem;
 
@@ -104,20 +111,23 @@
   } */
 
     .countdown-item {
-      color: #FDF4E3;
+      color: #262626;
       /* color: #eee6e6; */
       padding-inline: 1em;
       flex: 1;
+      border-bottom: 1px solid #262626;
     }
 
     .count-time {
-      font-size: 1.5em;
+      font-size: 1.7em;
       font-weight: bold;
       padding-top: .5em;
+      text-shadow: 0px 0px 3px #283105;
+      
     }
 
     /* ------------------------- CANDLES LIGHT */
-    .lights {
+    /* .lights {
       display: flex;
       gap: 1em;
     }
@@ -171,7 +181,7 @@
     0%{background-position:0% 0%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
-}
+} */
 
   </style>
 </head>
@@ -222,7 +232,7 @@
       <div id="days-count" class="count-time"></div>
       <p>days</p>
     </div>
-
+    
     <div class="countdown-item" id="hours">
       <div id="hours-count" class="count-time"></div>
       <p>hours</p>
