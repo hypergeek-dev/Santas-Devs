@@ -291,7 +291,7 @@ h6 {
 }
 
 #rear_image_wrapper {
-  background: url('/assets/images/rear_image.png') no-repeat center center;
+  background: url('../images/rear_image.png') no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -311,7 +311,7 @@ h6 {
 }
 
 #front_image_wrapper {
-  background: url('/assets/images/front_image.png') no-repeat center center;
+  background: url('../assets/images/front_image.png') no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 0;
