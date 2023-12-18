@@ -173,8 +173,60 @@
     </div>
   </div>
 
+  <!-----------------------------------Music Player Footer -->
+  <footer class="footer bg-dark text-light fixed-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Volume control on the right -->
+        <div class="col-4 text-end">
+          <button id="volume-mute-toggle" class="btn btn-secondary">
+            <i class="fas fa-volume-up volume-icon"></i>
+          </button>
+          <input type="range" id="volume-control" class="form-range" min="0" max="100" value="100">
+        </div>
+        
+        <!-- Player Controls in the center -->
+        <div class="col-4 text-center">
+          <button id="prev-song" class="btn btn-secondary">
+            <i class="fas fa-step-backward"></i>
+          </button>
+          <button id="play-pause" class="btn btn-secondary rounded-circle">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next-song" class="btn btn-secondary">
+            <i class="fas fa-step-forward"></i>
+          </button>
+        </div>
+        
+        <!-- Playlist toggle on the left -->
+        <div class="col-4 text-start">
+          <button id="playlist-toggle" class="btn btn-secondary">
+            <i class="fas fa-list"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col text-center">
+          <div id="current-song" class="current-song">Current Music Playing</div>
+          <input type="range" id="song-progress" class="form-range" min="0" value="0">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--------------------Playlist Modal -->
+  <div id="playlist-modal" class="playlist-modal" style="display: none;">
+    <div class="playlist-content">
+      <span class="close-modal">&times;</span>
+      <h2>Playlist</h2>
+      <ul id="playlist-list"></ul>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/music.js"></script>
   <script src="assets/js/card.js"></script>
 </body>
 
