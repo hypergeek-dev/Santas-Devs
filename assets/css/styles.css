@@ -281,7 +281,7 @@ h6 {
 .grid-container {
   position: relative;
   width: 100vw;
-  height: 80vh;
+  height: 10vh;
 }
 
 #rear_image_wrapper {
@@ -295,7 +295,7 @@ h6 {
   z-index: 1;
 }
 
-#between-wrapper {
+#between_wrapper {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -319,8 +319,8 @@ h6 {
   position: absolute;
   left: 10rem;
   transform: translateX(-50%);
-
 }
+
 /* -------------------------------- COUNTDOWN TIMER */
 .countdown-container {
   display: flex;
@@ -369,7 +369,7 @@ h6 {
   border: 1px solid #DAA520;
   transition: transform 0.3s ease-in-out;
 
-  z-index: 99;
+  z-index: 1100;
 }
 
 .faq-button:hover {
@@ -412,10 +412,4 @@ h6 {
   box-shadow: 0px 1px 5px 1px #c65b5b;
 }
 /* -------------------------------- END HELP PAGE (FAQ) */
-.faq-body {
-  border: 2px solid #A02C2C;
-  border-radius: .5rem;
-  box-shadow: 0px 1px 5px 1px #c65b5b;
-}
 
-/* -------------------------------- END HELP PAGE (FAQ) */
