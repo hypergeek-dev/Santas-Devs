@@ -14,7 +14,58 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="assets/css/styles.css" rel="stylesheet">
+<style>
+  .custom_style_h1
+  {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px #000;
+  
+  }
+/* Carousel Styling */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.carousel
+{
+  width: 50vw;
+  height: 50vh;
+  margin: auto;}
 
+
+  .custom_adjust_canvas
+
+  {
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+  
+  }
+.carousel-item img {
+  height: 50vh;
+  object-fit: cover;
+}
+
+/* Card Creation Form Styling */
+#cardForm label {
+  font-weight: bold;
+}
+
+#cardForm input, #cardForm select {
+  width: 30%;
+  margin: auto;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Button Styling */
+.btn {
+  margin: 10px;
+  font-weight: bold;
+}
+</style>
 </head>
 
 
@@ -45,7 +96,7 @@
     </nav>
   </header>
 
-  <h1 class="text-center mt-3">Create a card</h1>
+  <h1 class="text-center mt-3 custom_style_h1">Create a card</h1>
 
 
 
@@ -118,7 +169,7 @@
 
   <!-- card creation canvas -->
   <div class="row text-center mt-3">
-    <div class="col-sm-12">
+    <div class="col-sm-12 custom_adjust_canvas">
       <canvas id="card-canvas"></canvas>
     </div>
   </div>
