@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
 }
 
-}
+
 
 /* -------------------------------- COUNTDOWN TIMER */
 .countdown-container { 
@@ -279,14 +279,11 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 
   padding: 1em;
-  /* max-width: 340px; */
-  /* min-height: 302px; */
   margin: auto;
 
-  background: url("../images/countdown-timer/bg-timer.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-color: rgba(38, 38, 38, 0.8);
+  max-width: 5rem;
+  /* border-radius: .5rem; */
 
   margin-top: 1rem;  
 }
@@ -295,10 +292,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #FDF4E3;
   padding-inline: 1em;
   flex: 1;
+  border-bottom: 1px solid rgba(253, 244, 227, 0.3);
+  text-shadow: 0px 0px 3px #DAA520;
+
 }
 
 .count-time {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
   padding-top: .5em;
 }
