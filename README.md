@@ -32,9 +32,30 @@ One or two paragraphs providing an overview of our project.
 
 ## Features
 
-List the features of your project. For example:
+### Ambience Animation
+- Snow
+  - The user is able to see snow falling in the room window to create a scenic atmosphere.
+- Glow creation and image enhancement.
+  - The candles have been animated to glow giving a 3d experience.
 
-...
+### Christmas Countdown Timer
+- Live countdown to Christmas
+  - The user can visibly see a countdown timer running up till Christmas day.
+### Card Generator
+- Creation of card
+  - Users can create and preview a greeting card.
+- Sharing a URL link of created card
+  - Users can click a link that will create a URL that can be shared with their receipient - viewing it in an internet page. 
+- Saving of card to device
+  - Users can download a copy to their local device.
+### Music Player
+- User controlled music player
+  - Users can click to play music and change tracks whilst on the website. It can be paused and played aswell as navigating to the next track and previous track.
+### Help and Instructions
+  -  Users have access to information modals to help them navigate their way around the website.
+### About Us Page
+  - Users can see the profiles of the developers behind the website and click to the Github pages.
+
 
 ## User Stories
 
