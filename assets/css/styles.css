@@ -15,6 +15,44 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFD700;
 }
 
+/* ______________NAVBAR____________________ */
+.navbar {
+  background-color: #333; /* Cor de fundo da barra de navegação */
+  border-bottom: 4px solid #D32F2F; /* Borda inferior para destacar */
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5em;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+  transition: color 0.5s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: #D32F2F; /* Cor ao passar o mouse e focar */
+}
+
+.navbar .navbar-nav .active .nav-link,
+.navbar .navbar-nav .nav-link.active {
+  color: #D32F2F; /* Cor do link ativo */
+  border-bottom: 3px solid #D32F2F; /* Borda inferior para o item ativo */
+}
+
+/* Estilos para o botão de alternância da barra de navegação */
+.navbar-toggler {
+  border-color: #ff6600;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23ff6600' ... </svg>"); /* Use o SVG do exemplo ou crie o seu próprio */
+}
+/* ___________________________________________________________ */
+
 /* Festive background colors for Christmas */
 .bg-christmas {
   background-color: #d32f2f;
@@ -66,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Style for Music Player Footer */
+/* ________________Music Player Footer____________________ */
 .footer {
   background-color: #014421; /* Forest green background */
   padding: 10px;
@@ -76,23 +114,25 @@ h1, h2, h3, h4, h5, h6 {
 /* Playlist modal at the bottom right */
 .playlist-modal {
   position: fixed;
-  bottom: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+  bottom: 60px; /* Adjust as needed */
+  right: 0px; /* Adjust as needed */
   width: 300px; /* Adjust as needed */
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(211, 47, 47, 0.5);
   color: #fff;
-  border-radius: 5px;
   padding: 15px;
   display: none; /* Initially hidden */
-  z-index: 1001; /* Above other elements */
+  z-index: 1050; /* Above other elements */
+  overflow: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 
 .playlist-content {
-  background-color: #fff;
+  background-color: #014421;
   padding: 20px;
   border-radius: 5px;
   border-radius: 5px;
+  text-align: center;
 }
 
 /* Ensure close button is visible */
@@ -132,14 +172,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Style for list items in the playlist modal for better visibility */
 #playlist-list li {
-  color: #000; /* Black color for list items */
+  color: #fff; /* Black color for list items */
   cursor: pointer; /* Indicate the items are clickable */
   padding: 5px 0; /* Some padding for touch targets */
 }
 
 /* Style for green buttons with shadow */
 #prev-song, #play-pause, #next-song {
-  background-color: #014421; /* Forest green background */
+  background-color: #D32F2F; /* Forest green background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 
@@ -147,17 +187,25 @@ h1, h2, h3, h4, h5, h6 {
 .player-controls {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Space between buttons */
+  align-items: center;
+  gap: 15px; /* Space between buttons */
 }
 
-/* White color for volume and progress sliders */
+/* Style for the slider thumbs */
 .form-range::-webkit-slider-thumb {
-  background-color: #fff;
+  background-color: #D32F2F; 
 }
 
 .form-range::-moz-range-thumb {
-  background-color: #fff;
+  background-color: #D32F2F;
+} 
+
+.footer .btn-secondary {
+  background-color: #D32F2F; 
+  border: none; /* Remove border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
 }
+
 
 /* _____________________________________________________ */
 
@@ -268,7 +316,11 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
 }
 
-
+.navbar .navbar-brand {
+  position: absolute;
+  left: 10rem;
+  transform: translateX(-50%);
+}
 
 /* -------------------------------- COUNTDOWN TIMER */
 .countdown-container { 
