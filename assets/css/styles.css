@@ -36,6 +36,12 @@ h6 {
   transition: color 0.5s;
 }
 
+/* Style for active nav link */
+.navbar .navbar-nav .nav-link.active {
+  color: #D32F2F; /* Change color for active state */
+  border-bottom: 3px solid #D32F2F; /* Underline for active state */
+}
+
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link:focus {
   color: #D32F2F; /* Cor ao passar o mouse e focar */
@@ -138,7 +144,7 @@ h6 {
 
 
 .playlist-content {
-  background-color: #014421;
+  background-color: rgba(11, 61, 46, .7);
   padding: 20px;
   border-radius: 5px;
   border-radius: 5px;
@@ -285,7 +291,7 @@ h6 {
 }
 
 #rear_image_wrapper {
-  background: url('/assets/images/rear_image.png') no-repeat center center;
+  background: url('../images/rear_image.png') no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -305,8 +311,12 @@ h6 {
 }
 
 #front_image_wrapper {
+<<<<<<< HEAD
   background: url('/assets/images/front_image.png') no-repeat center center;
 
+=======
+  background: url('../assets/images/front_image.png') no-repeat center center;
+>>>>>>> 3e6762be014cb6fd42afb46004ad44fa1267fe34
   background-size: cover;
   position: absolute;
   top: 0;

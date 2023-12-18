@@ -112,3 +112,22 @@ function updateCountdown() {
  // Event listeners
  window.addEventListener('resize', resize);
  window.addEventListener('load', initSnow);
+
+
+ // NAV BAR
+ // Listen for a document ready event if you are not using jQuery
+document.addEventListener('DOMContentLoaded', function () {
+  // Get all nav links
+  var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  // Iterate through each nav link
+  navLinks.forEach(function(link) {
+    // Remove active class from all nav links
+    link.classList.remove('active');
+
+    // Add active class to the current page's nav link
+    if(link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
+});
