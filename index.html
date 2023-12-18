@@ -5,148 +5,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interactive Christmas Card</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
    <!-- Bootstrap icons -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="assets/css/styles.css" rel="stylesheet">
 
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-    }
-
-    grid-container {
-      position: relative;
-      width: 100vw;
-      height: 80vh;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: minmax(10vh, auto);
-      padding-top:20vh;
-    
-  }
-
-    #rear_image_wrapper {
-      background: url('assets/images/rear_image.png') no-repeat center center;
-      background-size: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 80vh;
-      z-index: 1;
-    }
-
-    #between-wrapper {
-      position: absolute;
-      z-index: 99;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-    }
-
-    #front_image_wrapper {
-      background: url('assets/images/front_image.png') no-repeat center center;
-      background-size: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 80vh;
-      z-index: 3;
-    }
-
-    .top-row,
-    .bottom-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: minmax(10vh, auto);
-    }
-
-    .top3col,
-    .bottom2col {
-      display: grid;
-      grid-template-rows: repeat(2, 1fr);
-    }
-
-    .top3col1row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
- 
-    .top1col, .top2col, .top3col1row1col, .top3col1row2col, .bottom1col, .bottom2col1row, .bottom2col2row, .bottom3col {
-
-
-
-    .top1col,
-    .top2col,
-    .top3col1row1col,
-    .top3col1row2col,
-    .bottom1col,
-    .bottom2col1row,
-    .bottom2col2row,
-    .bottom3col {
-      width: 100%;
-      height: 100%;
-
-    }
-
-    .top1col {
-      height:52.24vh;
-      width:51.11vw;
-    };
-    .top2col {
-      height:51.17vh;
-      width:11.11vw;
-    };
-    .top3col1row1col {
-      height:29.2vh;
-      width:18.13vw;
-    };
-    .top3col1row2col {
-      height:18.98vh;
-      width:29.45vw;
-    };
-    .top3col2row
-    {
-      height:22.85vh;
-      width:37.31vw;}
-
-    .bottom1col{
-      height:39.26vh;
-      width:22.43vw;
-    };
-    .bottom2col1row{
-      height:17.60vh;
-      width:8,48vw;
-    };
-    .bottom2col2row{
-      height:29.39vh;
-      width:8.48vw;
-    };
-    .bottom3col{
-      height:46.88vh;
-      width:69vw;
-    };
-
-  </style>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Santa Dev's</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse justify-content-center" id="navContent">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
@@ -156,18 +34,7 @@
             <li class="nav-item">
               <a class="nav-link" href="card_gen.html">Card Generator</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dennis.html">Daniel</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ruksana.html">Ruksana</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ekaterina.html">Ekaterina</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="atchuchi.html">Atchutchi</a>
-            </li>
+            
           </ul>
         </div>
       </div>
@@ -177,14 +44,8 @@
   <div class="grid-container">
     <div id="rear_image_wrapper"></div>
     <div id="between-wrapper">
-      <div class="top-row">
-        <div class="top1col">top1col</div>
-        <div class="top2col">top2col</div>
-        <div class="top3col">
-          <div class="top3col1row">
-            <div class="top3col1row1col">top3col1row1col</div>
-            
-            <div class="top3col1row2col">
+
+            <div class="countdown-wrapper">
               <!-------------------------------------------- COUNTDOWN TIMER -->
               <div class="countdown-container">
                 <div class="countdown-item" id="days">
@@ -210,19 +71,6 @@
             </div>
               <!-------------------------------------------- END COUNTDOWN TIMER -->
 
-          </div>
-          <div class="top3col2row">top3col2row</div>
-        </div>
-      </div>
-      <div class="bottom-row">
-        <div class="bottom1col">bottom1col</div>
-        <div class="bottom2col">
-          <div class="bottom2col1row">bottom2col1row</div>
-          <div class="bottom2col2row">bottom2col2row</div>
-        </div>
-        <div class="bottom3col">bottom3col</div>
-      </div>
-    </div>
     <div id="front_image_wrapper"></div>
   </div>
 
@@ -295,9 +143,62 @@
     </div>
   </div>
   <!---------------------------------------------------------- HELP PAGE MODAL -->
+
+  <!-----------------------------------Music Player Footer -->
+  <footer class="footer bg-dark text-light fixed-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Volume control on the right -->
+        <div class="col-4 text-end">
+          <button id="volume-mute-toggle" class="btn btn-secondary">
+            <i class="fas fa-volume-up volume-icon"></i>
+          </button>
+          <input type="range" id="volume-control" class="form-range" min="0" max="100" value="100">
+        </div>
+        
+        <!-- Player Controls in the center -->
+        <div class="col-4 text-center">
+          <button id="prev-song" class="btn btn-secondary">
+            <i class="fas fa-step-backward"></i>
+          </button>
+          <button id="play-pause" class="btn btn-secondary rounded-circle">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next-song" class="btn btn-secondary">
+            <i class="fas fa-step-forward"></i>
+          </button>
+        </div>
+        
+        <!-- Playlist toggle on the left -->
+        <div class="col-4 text-start">
+          <button id="playlist-toggle" class="btn btn-secondary">
+            <i class="fas fa-list"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col text-center">
+          <div id="current-song" class="current-song">Current Music Playing</div>
+          <input type="range" id="song-progress" class="form-range" min="0" value="0">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--------------------Playlist Modal -->
+  <div id="playlist-modal" class="playlist-modal" style="display: none;">
+    <div class="playlist-content">
+      <span class="close-modal">&times;</span>
+      <h2>Playlist</h2>
+      <ul id="playlist-list"></ul>
+    </div>
+  </div>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/music.js"></script>
   <script src="assets/js/timer.js"></script>
 
 </body>

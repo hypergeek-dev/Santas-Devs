@@ -1,19 +1,61 @@
-
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   background-color: #fff;
-  color: #000; 
+  color: #000;
   margin: 0;
   padding: 0;
   height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Great Vibes', cursive;
   font-weight: bold;
   color: #FFD700;
 }
+
+/* ______________NAVBAR____________________ */
+.navbar {
+  background-color: #333; /* Cor de fundo da barra de navegação */
+  border-bottom: 4px solid #D32F2F; /* Borda inferior para destacar */
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5em;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+  transition: color 0.5s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: #D32F2F; /* Cor ao passar o mouse e focar */
+}
+
+.navbar .navbar-nav .active .nav-link,
+.navbar .navbar-nav .nav-link.active {
+  color: #D32F2F; /* Cor do link ativo */
+  border-bottom: 3px solid #D32F2F; /* Borda inferior para o item ativo */
+}
+
+/* Estilos para o botão de alternância da barra de navegação */
+.navbar-toggler {
+  border-color: #ff6600;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23ff6600' ... </svg>"); /* Use o SVG do exemplo ou crie o seu próprio */
+}
+/* ___________________________________________________________ */
 
 /* Festive background colors for Christmas */
 .bg-christmas {
@@ -61,14 +103,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .overlay-container {
   position: relative;
- 
+
   margin: auto;
 }
 
 
-/* Style for Music Player Footer */
+/* ________________Music Player Footer____________________ */
 .footer {
-  background-color: #014421; /* Forest green background */
+  background-color: #014421;
+  /* Forest green background */
   padding: 10px;
   color: #fff;
 }
@@ -76,23 +119,30 @@ h1, h2, h3, h4, h5, h6 {
 /* Playlist modal at the bottom right */
 .playlist-modal {
   position: fixed;
-  bottom: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  width: 300px; /* Adjust as needed */
-  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 60px;
+  /* Adjust as needed */
+  right: 0px;
+  /* Adjust as needed */
+  width: 300px;
+  /* Adjust as needed */
+  background-color: rgba(211, 47, 47, 0.5);
   color: #fff;
-  border-radius: 5px;
   padding: 15px;
-  display: none; /* Initially hidden */
-  z-index: 1001; /* Above other elements */
+  display: none;
+  /* Initially hidden */
+  z-index: 1050;
+  /* Above other elements */
+  overflow: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 
 .playlist-content {
-  background-color: #fff;
+  background-color: #014421;
   padding: 20px;
   border-radius: 5px;
   border-radius: 5px;
+  text-align: center;
 }
 
 /* Ensure close button is visible */
@@ -108,7 +158,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-range {
-  width: 100%; /* Full width for volume and progress bar */
+  width: 100%;
+  /* Full width for volume and progress bar */
 }
 
 /* Style for rounded play/pause button */
@@ -127,37 +178,54 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Ensure the volume icon is white for visibility */
 .volume-icon {
-  color: #fff; /* White color for the volume icon */
+  color: #fff;
+  /* White color for the volume icon */
 }
 
 /* Style for list items in the playlist modal for better visibility */
 #playlist-list li {
-  color: #000; /* Black color for list items */
-  cursor: pointer; /* Indicate the items are clickable */
-  padding: 5px 0; /* Some padding for touch targets */
+  color: #fff;
+  /* Black color for list items */
+  cursor: pointer;
+  /* Indicate the items are clickable */
+  padding: 5px 0;
+  /* Some padding for touch targets */
 }
 
 /* Style for green buttons with shadow */
-#prev-song, #play-pause, #next-song {
-  background-color: #014421; /* Forest green background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+#prev-song,
+#play-pause,
+#next-song {
+  background-color: #D32F2F;
+  /* Forest green background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Shadow effect */
 }
 
 /* Centering the player controls */
 .player-controls {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Space between buttons */
+  align-items: center;
+  gap: 15px;
+  /* Space between buttons */
 }
 
-/* White color for volume and progress sliders */
+/* Style for the slider thumbs */
 .form-range::-webkit-slider-thumb {
-  background-color: #fff;
+  background-color: #D32F2F; 
 }
 
 .form-range::-moz-range-thumb {
-  background-color: #fff;
+  background-color: #D32F2F;
+} 
+
+.footer .btn-secondary {
+  background-color: #D32F2F; 
+  border: none; /* Remove border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
 }
+
 
 /* _____________________________________________________ */
 
@@ -217,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #rear_image_wrapper {
-  background: url('assets/images/rear_image.png') no-repeat center center;
+  background: url('/assets/images/rear_image.png') no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -237,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #front_image_wrapper {
-  background: url('assets/images/front_image.png') no-repeat center center;
+  background: url('/assets/images/front_image.png') no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -247,31 +315,14 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 3;
 }
 
-.top-row, .bottom-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(10vh, auto);
-}
-
-.top3col, .bottom2col {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.top3col1row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.top1col, .top2col, .top3col1row1col, .top3col1row2col, .bottom1col, .bottom2col1row, .bottom2col2row, .bottom3col {
-  width: 100%;
-  height: 100%;
-}
+.navbar .navbar-brand {
+  position: absolute;
+  left: 10rem;
+  transform: translateX(-50%);
 
 }
-
 /* -------------------------------- COUNTDOWN TIMER */
-.countdown-container { 
+.countdown-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -279,29 +330,30 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 
   padding: 1em;
-  /* max-width: 340px; */
-  /* min-height: 302px; */
   margin: auto;
 
-  background: url("../images/countdown-timer/bg-timer.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-color: rgba(38, 38, 38, 0.8);
+  max-width: 5rem;
+  /* border-radius: .5rem; */
 
-  margin-top: 1rem;  
+  margin-top: 1rem;
 }
 
 .countdown-item {
   color: #FDF4E3;
   padding-inline: 1em;
   flex: 1;
+  border-bottom: 1px solid rgba(253, 244, 227, 0.3);
+  text-shadow: 0px 0px 3px #DAA520;
+
 }
 
 .count-time {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
   padding-top: .5em;
 }
+
 /* -------------------------------- END COUNTDOWN TIMER */
 
 /* -------------------------------- HELP PAGE (FAQ) */
@@ -365,4 +417,5 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: .5rem;
   box-shadow: 0px 1px 5px 1px #c65b5b;
 }
+
 /* -------------------------------- END HELP PAGE (FAQ) */
