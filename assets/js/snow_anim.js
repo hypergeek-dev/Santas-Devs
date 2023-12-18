@@ -19,8 +19,8 @@ let _snowCanvas = function(obj) {
 
     var maxSpeed = obj.maxSpeed || 3.5,
         minSpeed = obj.minSpeed || 0.3,
-        count = obj.amount || 150,
-        rMax = obj.rMax || 4,
+        count = obj.amount || 1500,
+        rMax = obj.rMax || 3,
         rMin = obj.rMin || 1,
         W, H;
 
