@@ -306,6 +306,7 @@ h6 {
 
 #front_image_wrapper {
   background: url('/assets/images/front_image.png') no-repeat center center;
+
   background-size: cover;
   position: absolute;
   top: 0;
